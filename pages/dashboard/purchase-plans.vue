@@ -6,24 +6,18 @@
     <form class="p-6 space-y-6 z-10" @submit.prevent="buyPlan">
       <div class="space-y-1">
         <label class="text-xs text-gray-700 font-medium">Choose Plan:*</label>
-        <select
-          v-model="form.plan"
-          class="block px-2 text-sm outline-none py-3 rounded-md border w-full border-transparent border-l-4 group-hover:border-blue-600 group-hover:bg-gray-100"
-        >
-          <option
-            v-for="(item, index) in [
-              {
-                name: 'Platinum Plan (29%) Monthly',
-                value: 'Platinum',
-              },
-              {
-                name: 'Diamond Plan (35%) Monthly',
-                value: 'Diamond',
-              },
-            ]"
-            :key="index"
-            :value="item.value"
-          >
+        <select v-model="form.plan"
+          class="block px-2 text-sm outline-none py-3 rounded-md border w-full border-transparent border-l-4 group-hover:border-blue-600 group-hover:bg-gray-100">
+          <option v-for="(item, index) in [
+      {
+        name: 'Platinum Plan (29%) Monthly',
+        value: 'Platinum',
+      },
+      {
+        name: 'Diamond Plan (35%) Monthly',
+        value: 'Diamond',
+      },
+    ]" :key="index" :value="item.value">
             {{ item.name }}
           </option>
         </select>
@@ -31,16 +25,13 @@
       <div class="space-y-1">
         <label class="text-xs text-gray-700 font-medium">Enter Amount:*</label>
         <input v-model="form.amount" class="py-2.5 border rounded-md w-full outline-none pl-6">
-        <span class="text-xs font-medium text-red-500">Note that plan amount must be available in your account balance of
+        <span class="text-xs font-medium text-red-500">Note that plan amount must be available in your account balance
+          of
           {{ formatNumberAsDollar(userData?.accountBalance) ?? '0.00' }}.</span>
       </div>
-      <button
-        :class="[
-          !isFormEmpty || processing ? 'opacity-25 cursor-not-allowed' : '',
-        ]"
-        :disabled="!isFormEmpty"
-        class="w-full text-white text-sm rounded-lg bg-black py-3"
-      >
+      <button :class="[
+      !isFormEmpty || processing ? 'opacity-25 cursor-not-allowed' : '',
+    ]" :disabled="!isFormEmpty" class="w-full text-white text-sm rounded-lg bg-black py-3">
         {{ processing ? 'processing....' : 'Proceed' }}
       </button>
     </form>
@@ -50,7 +41,7 @@
 <script>
 export default {
   layout: 'user-dashboard',
-  data () {
+  data() {
     return {
       processing: false,
       userData: {},
@@ -61,15 +52,15 @@ export default {
     }
   },
   computed: {
-    isFormEmpty () {
+    isFormEmpty() {
       return !!(this.form.plan && this.form.amount)
     }
   },
-  mounted () {
+  mounted() {
     this.getUserInfo()
   },
   methods: {
-    async buyPlan () {
+    async buyPlan() {
       this.processing = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       try {
@@ -79,7 +70,7 @@ export default {
         }
       `
         const response = await fetch(
-          'https://fidelityvalues.onrender.com/graphql/query',
+          'https://visionary-zpui.onrender.com/graphql/query',
           {
             method: 'POST',
             headers: {
@@ -107,10 +98,10 @@ export default {
         this.processing = false
       }
     },
-    formatNumberAsDollar (number) {
+    formatNumberAsDollar(number) {
       return number?.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
     },
-    async getUserInfo () {
+    async getUserInfo() {
       this.loading = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       this.loading = true
@@ -134,7 +125,7 @@ export default {
       `
 
       try {
-        const response = await fetch('https://fidelityvalues.onrender.com/graphql/query', {
+        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

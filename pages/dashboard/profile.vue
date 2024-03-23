@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="lg:flex justify-start items-start gap-x-10 space-y-10 lg:space-y-0"
-  >
+  <main class="lg:flex justify-start items-start gap-x-10 space-y-10 lg:space-y-0">
     <section class="bg-white lg:w-5/12 rounded-md border">
       <p class="border-b pl-6 py-4 text-sm font-semibold">
         Keep Your Profile Up-To-Date
@@ -9,7 +7,8 @@
       <form class="p-10 space-y-6" @submit.prevent="updateUser">
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">First Name</label>
-          <input v-model="updatedUserData.firstName" type="text" class="py-2 border rounded-md w-full outline-none pl-6">
+          <input v-model="updatedUserData.firstName" type="text"
+            class="py-2 border rounded-md w-full outline-none pl-6">
           <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
         </div>
 
@@ -27,7 +26,8 @@
 
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Password:</label>
-          <input v-model="updatedUserData.password" type="password" class="py-2 border rounded-md w-full outline-none pl-6">
+          <input v-model="updatedUserData.password" type="password"
+            class="py-2 border rounded-md w-full outline-none pl-6">
           <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
         </div>
 
@@ -36,7 +36,8 @@
           <input v-model="updatedUserData.walletAddress" type="text" class="py-2 border rounded-md w-full outline-none pl-6">
         </div> -->
         <div class="w-full">
-          <button :disabled="!isFormEmpty" :class="[!isFormEmpty ? 'opacity-25 cursor-not-allowed' : null]" class="bg-green-500 w-full disabled:cursor-not-allowed disabled:opacity-25 text-white rounded-lg px-6 py-3 text-sm">
+          <button :disabled="!isFormEmpty" :class="[!isFormEmpty ? 'opacity-25 cursor-not-allowed' : null]"
+            class="bg-green-500 w-full disabled:cursor-not-allowed disabled:opacity-25 text-white rounded-lg px-6 py-3 text-sm">
             {{ processing ? 'processing...' : 'Update' }}
           </button>
         </div>
@@ -174,7 +175,7 @@
 <script>
 export default {
   layout: 'user-dashboard',
-  data () {
+  data() {
     return {
       userId: '12345',
       processing: false,
@@ -187,15 +188,15 @@ export default {
     }
   },
   computed: {
-    isFormEmpty () {
+    isFormEmpty() {
       return !!(this.updatedUserData.firstName && this.updatedUserData.lastName && this.updatedUserData.email && this.updatedUserData.password)
     }
   },
-  mounted () {
+  mounted() {
     this.getUserInfo()
   },
   methods: {
-    async updateUser () {
+    async updateUser() {
       this.processing = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       const user = JSON.parse(window.localStorage.getItem('user'))
@@ -219,7 +220,7 @@ export default {
           }
         `
         const response = await fetch(
-          'https://fidelityvalues.onrender.com/graphql/query',
+          'https://visionary-zpui.onrender.com/graphql/query',
           {
             method: 'POST',
             headers: {
@@ -250,7 +251,7 @@ export default {
         this.processing = false
       }
     },
-    async getUserInfo () {
+    async getUserInfo() {
       this.loading = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       this.loading = true
@@ -274,7 +275,7 @@ export default {
       `
 
       try {
-        const response = await fetch('https://fidelityvalues.onrender.com/graphql/query', {
+        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

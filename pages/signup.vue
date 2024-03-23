@@ -104,8 +104,7 @@
             !isFormEmpty
               ? 'opacity-25 cursor-not-allowed'
               : '',
-          ]"
-                class="inline-block w-full shrink-0 text-xs rounded-md border border-green-500 bg-green-600 px-12 py-3 font-medium text-white transition">
+          ]" class="inline-block w-full shrink-0 text-xs rounded-md border border-green-500 bg-green-600 px-12 py-3 font-medium text-white transition">
                 {{ formBusy ? "processing..." : " Create an account" }}
               </button>
 
@@ -162,7 +161,7 @@ export default {
         `
 
         const response = await fetch(
-          'https://fidelityvalues.onrender.com/graphql/query',
+          'https://visionary-zpui.onrender.com/graphql/query',
           {
             method: 'POST',
             headers: {

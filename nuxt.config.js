@@ -70,7 +70,7 @@ export default {
   //       /**
   //        * The client endpoint url
   //        */
-  //       endpoint: 'https://fidelityvalues.onrender.com/graphql/query',
+  //       endpoint: 'https://visionary-zpui.onrender.com/graphql/query',
   //       /**
   //        * Per-client options overrides
   //        * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
@@ -128,14 +128,14 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // proxy: true,
-    baseURL: 'https://fidelityvalues.onrender.com'
+    baseURL: 'https://visionary-zpui.onrender.com'
   },
   auth: {
     // strategies: {
     //   graphql: {
     //     scheme: '~/schemes/graphqlScheme.js',
     //     provider: 'nuxt-auth-graphql',
-    //     endpoint: 'https://fidelityvalues.onrender.com/graphql/query', // Your GraphQL API endpoint
+    //     endpoint: 'https://visionary-zpui.onrender.com/graphql/query', // Your GraphQL API endpoint
     //     tokenType: 'Bearer',
     //     tokenName: 'Authorization'
     //   }
@@ -231,7 +231,7 @@ export default {
     graphql: {
       clients: {
         default: {
-          endpoint: 'https://fidelityvalues.onrender.com/graphql/query'
+          endpoint: 'https://visionary-zpui.onrender.com/graphql/query'
         }
       }
     }
@@ -239,7 +239,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://fidelityvalues.onrender.com/graphql/query' // Your graphql endpiont
+        httpEndpoint: 'https://visionary-zpui.onrender.com/graphql/query' // Your graphql endpiont
       }
     }
   }

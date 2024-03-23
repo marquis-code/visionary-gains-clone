@@ -7,11 +7,13 @@
       <form class="p-6 space-y-6" @submit.prevent="handleWithdrawal">
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Amount</label>
-          <input v-model="form.amount" placeholder="Enter amount in USD" type="number" class="py-3 border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
+          <input v-model="form.amount" placeholder="Enter amount in USD" type="number"
+            class="py-3 border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
         </div>
         <div class="space-y-4">
           <label class="text-xs text-gray-700 font-medium">Withdrawal Type</label>
-          <select v-model="form.withdrawalType" class="py-3 border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
+          <select v-model="form.withdrawalType"
+            class="py-3 border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
             <option value="" disabled>
               ---- Select withdrawal type -----
             </option>
@@ -31,10 +33,12 @@
           </div> -->
           <div class="space-y-1">
             <label class="text-xs text-gray-700 font-medium">Wallet address</label>
-            <input v-model="form.wallet" class="py-3 bg-gray-50 border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
+            <input v-model="form.wallet"
+              class="py-3 bg-gray-50 border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
           </div>
           <div class="w-full pt-6">
-            <button :disabled="!isFormEnabled || processing" class="w-full text-white disabled:cursor-not-allowed disabled:opacity-25  bg-black py-3 px-3 rounded-md">
+            <button :disabled="!isFormEnabled || processing"
+              class="w-full text-white disabled:cursor-not-allowed disabled:opacity-25  bg-black py-3 px-3 rounded-md">
               {{ processing ? 'processing..' : 'Submit' }}
             </button>
           </div>
@@ -49,7 +53,7 @@ import ApiLoader from '@/components/ApiLoader.vue'
 export default {
   components: { ApiLoader },
   layout: 'user-dashboard',
-  data () {
+  data() {
     return {
       depositType: '',
       imagePreview: null,
@@ -67,53 +71,53 @@ export default {
     }
   },
   computed: {
-    computedWalletAddress () {
+    computedWalletAddress() {
       return this.form.withdrawalType === 'bitcoin' ? this.computed_wallet_info[0].code : this.form.withdrawalType === 'ethereum' ? this.computed_wallet_info[1].code : this.form.withdrawalType === 'bank' ? this.computed_wallet_info[2].code : ''
     },
-    isFormEnabled () {
+    isFormEnabled() {
       return !!(this.form.amount && this.form.withdrawalType)
     },
-    computed_wallet_info () {
+    computed_wallet_info() {
       return Object.keys(this.adminData).length
         ? [
-            {
-              name: 'Bitcoin',
-              code: this.adminData?.admin?.btc ?? 'N/A'
-            },
-            {
-              name: 'Ethereum erc-20',
-              code: this.adminData?.admin?.eth ?? 'N/A'
-            },
-            {
-              name: 'Bank Account',
-              code: '00907654378889'
-            }
-          ]
+          {
+            name: 'Bitcoin',
+            code: this.adminData?.admin?.btc ?? 'N/A'
+          },
+          {
+            name: 'Ethereum erc-20',
+            code: this.adminData?.admin?.eth ?? 'N/A'
+          },
+          {
+            name: 'Bank Account',
+            code: '00907654378889'
+          }
+        ]
         : [
-            {
-              name: 'Bitcoin',
-              code: ''
-            },
-            {
-              name: 'Ethereum erc-20',
-              code: ''
-            },
-            {
-              name: 'Bank Account',
-              code: ''
-            }
-          ]
+          {
+            name: 'Bitcoin',
+            code: ''
+          },
+          {
+            name: 'Ethereum erc-20',
+            code: ''
+          },
+          {
+            name: 'Bank Account',
+            code: ''
+          }
+        ]
     }
   },
-  mounted () {
+  mounted() {
     this.getAdminInfo()
   },
   methods: {
-    copy (val) {
+    copy(val) {
       const cb = window.navigator.clipboard
       cb.writeText(val).then(() => this.$toastr.s('Copied to clipboard'))
     },
-    async handleWithdrawal () {
+    async handleWithdrawal() {
       this.processing = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       try {
@@ -123,7 +127,7 @@ export default {
           }
         `
         const response = await fetch(
-          'https://fidelityvalues.onrender.com/graphql/query',
+          'https://visionary-zpui.onrender.com/graphql/query',
           {
             method: 'POST',
             headers: {
@@ -156,7 +160,7 @@ export default {
         this.processing = false
       }
     },
-    async getAdminInfo () {
+    async getAdminInfo() {
       this.loadingAdminInfo = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       const query = `
@@ -186,7 +190,7 @@ export default {
       `
 
       try {
-        const response = await fetch('https://fidelityvalues.onrender.com/graphql/query', {
+        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -210,6 +214,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -4,21 +4,9 @@
       <!-- <b-container> -->
       <section class="text-white">
         <div class="flex items-center justify-between my-3">
-          <button
-            class="outline-none border bg-gray-200 text-black px-3 py-1 rounded-md text-sm"
-            @click="goBack()"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="23"
-              height="23"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#747070"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="bevel"
-            >
+          <button class="outline-none border bg-gray-200 text-black px-3 py-1 rounded-md text-sm" @click="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
+              stroke="#747070" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel">
               <path d="M19 12H6M12 5l-7 7 7 7" />
             </svg>
           </button>
@@ -27,24 +15,12 @@
         <div class="sm:flex-1 pb-0 mt-3">
           <label for="search" class="sr-only">Search</label>
 
-          <input
-            v-model="search"
-            type="text"
-            placeholder="Search.."
-            class="w-full rounded-tr-md rounded-tl-md outline-none bg-white p-3 text-gray-700 transition border focus:border-white focus:outline-none focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent"
-          >
+          <input v-model="search" type="text" placeholder="Search.."
+            class="w-full rounded-tr-md rounded-tl-md outline-none bg-white p-3 text-gray-700 transition border focus:border-white focus:outline-none focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent">
         </div>
         <b-card class="mt-3">
-          <b-table
-            striped
-            show-empty
-            responsive
-            :items="transactionsList"
-            :fields="fields"
-            :busy="loading"
-            :current-page="currentPage"
-            :per-page="perPage"
-          >
+          <b-table striped show-empty responsive :items="transactionsList" :fields="fields" :busy="loading"
+            :current-page="currentPage" :per-page="perPage">
             <template #table-busy>
               <div class="text-center my-2 cursor-pointer">
                 <b-spinner class="align-middle" />
@@ -53,14 +29,12 @@
             </template>
 
             <template #empty>
-              <p
-                class="text-center text-sm text-secondary py-2 cursor-pointer"
-              >
+              <p class="text-center text-sm text-secondary py-2 cursor-pointer">
                 {{
-                  search
-                    ? `No Transactions found for search value: "${search}"`
-                    : "No Transactions available"
-                }}
+            search
+              ? `No Transactions found for search value: "${search}"`
+              : "No Transactions available"
+          }}
               </p>
             </template>
 
@@ -75,8 +49,8 @@
               <div class="py-4">
                 <span class="font-medium py-2 text-sm cursor-pointer">
                   {{
-                    formatNumberAsDollar(data?.item?.amount)
-                  }}
+            formatNumberAsDollar(data?.item?.amount)
+          }}
                 </span>
               </div>
             </template>
@@ -85,7 +59,7 @@
               <div class="py-4">
                 <span class="font-medium py-2 text-sm cursor-pointer">
                   {{
-                    data?.item?.wallet }}</span>
+            data?.item?.wallet }}</span>
               </div>
             </template>
 
@@ -100,7 +74,7 @@
               <div class="py-4">
                 <span class="font-medium py-2 text-sm cursor-pointer">
                   {{
-                    data?.item?.transactionStatus }}</span>
+            data?.item?.transactionStatus }}</span>
               </div>
             </template>
 
@@ -123,13 +97,7 @@
           </b-table>
 
           <div class="flex justify-end items-end">
-            <b-pagination
-              v-model="currentPage"
-              :total-rows="totalRows"
-              :per-page="perPage"
-              size="md"
-              class="my-3"
-            />
+            <b-pagination v-model="currentPage" :total-rows="totalRows" :per-page="perPage" size="md" class="my-3" />
           </div>
         </b-card>
         <!-- </div> -->
@@ -148,7 +116,7 @@ export default {
   },
   layout: 'user-dashboard',
   scrollToTop: true,
-  data () {
+  data() {
     return {
       transactionsList: [],
       fields: [
@@ -196,7 +164,7 @@ export default {
       loading: false
     }
   },
-  head () {
+  head() {
     return {
       meta: [
         {
@@ -247,17 +215,17 @@ export default {
       ]
     }
   },
-  created () {
+  created() {
     this.fetchTransactions()
   },
-  mounted () {
+  mounted() {
     this.totalRows = this.transactionsList.length
   },
   methods: {
-    goBack () {
+    goBack() {
       this.$router.go(-1)
     },
-    async fetchTransactions () {
+    async fetchTransactions() {
       this.loading = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
       this.loading = true
@@ -290,7 +258,7 @@ export default {
       `
 
       try {
-        const response = await fetch('https://fidelityvalues.onrender.com/graphql/query', {
+        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -311,7 +279,7 @@ export default {
         this.loading = false
       }
     },
-    formatDateTime (date) {
+    formatDateTime(date) {
       // Check if date is a string and convert it to a Date object
       if (typeof date === 'string') {
         date = new Date(date)
@@ -325,7 +293,7 @@ export default {
         return 'Invalid Date'
       }
     },
-    formatNumberAsDollar (number) {
+    formatNumberAsDollar(number) {
       return number?.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
     }
   }
@@ -336,13 +304,16 @@ export default {
 .fade-enter-active {
   transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02) 0.15s;
 }
+
 .fade-leave-active {
   transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
 }
+
 .fade-enter-from {
   opacity: 0;
   transform: scale(0.8);
 }
+
 .fade-leave-to {
   transform: scale(0.8);
 }
