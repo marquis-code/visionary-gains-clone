@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#003b6d]">
+  <section class="bg-[#3C4142]">
     <section class="text-gray-600 body-font">
       <!-- <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col text-center w-full mb-20">
@@ -72,7 +72,7 @@
 <script>
 export default {
   name: 'Stats',
-  data () {
+  data() {
     return {
       stats: [
         {

@@ -54,7 +54,7 @@
           <p class="leading-relaxed text-sm">
             This deal is a significant milestone for Envitia and a real opportunity to accelerate the growth of the
             business through further product development in AI & ML as well as expansion into new sectors. We are
-            delighted to partner with a highly experienced private equity house in Visionary Trader that are closely
+            delighted to partner with a highly experienced private equity house in Visionary Gains that are closely
             aligned with our vision and we look forward to working with them to achieve our ambitious growth agenda.
           </p>
           <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6" />

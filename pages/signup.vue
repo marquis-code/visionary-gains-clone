@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white space-y-6">
     <div class="lg:grid lg:min-h-screen lg:grid-cols-12 w-full">
-      <section class="relative flex h-32 items-end bg-[#003b6d] lg:col-span-5 lg:h-full xl:col-span-6">
+      <section class="relative flex h-32 items-end bg-[#3C4142] lg:col-span-5 lg:h-full xl:col-span-6">
         <img alt="Night"
           src="https://images.unsplash.com/photo-1627253781598-63b98c51da42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
           class="absolute inset-0 h-full w-full object-cover opacity-80">
@@ -13,7 +13,7 @@
           </a>
 
           <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-            Welcome to Visionary Trader
+            Welcome to Visionary Gains
           </h2>
 
           <p class="mt-4 leading-relaxed text-white/90">
@@ -24,7 +24,7 @@
       </section>
 
       <main
-        class="items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6 bg-[#003b6d] w-full">
+        class="items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6 bg-[#3C4142] w-full">
         <div class="max-w-xl lg:max-w-3xl lg:mx-auto grid place-content-center h-full">
           <div class="relative -mt-16 block lg:hidden">
             <a class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
@@ -34,7 +34,7 @@
             </a>
 
             <h1 class="mt-2 text-2xl font-bold text-gray-200 sm:text-3xl md:text-4xl">
-              Welcome to Visionary Trader
+              Welcome to Visionary Gains
             </h1>
 
             <p class="mt-4 leading-relaxed text-sm text-white">

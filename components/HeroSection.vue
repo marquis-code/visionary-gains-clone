@@ -1,7 +1,8 @@
 <template>
   <section>
-    <div class="dark:bg-[#003b6d]">
-      <div class="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-900 space-y-6">
+    <div class="dark:bg-[#3C4142]">
+      <div
+        class="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-900 space-y-6">
         <h1 class="text-4xl font-bold leadi sm:text-6xl xl:max-w-3xl dark:text-white">
           Trade global financial markets
         </h1>
@@ -15,12 +16,14 @@
         </div>
         <div class="flex justify-center gap-x-6">
           <div class="w-full">
-            <nuxt-link to="/login" type="button" class="px-8 w-full block py-3 m-2 text-sm font-medium rounded dark:text-gray-50 bg-[#01257D] hover:bg-[#20305a]">
+            <nuxt-link to="/login" type="button"
+              class="px-8 w-full block py-3 m-2 text-sm font-medium rounded dark:text-gray-50 bg-[#01257D] hover:bg-[#20305a]">
               Get started
             </nuxt-link>
           </div>
           <div class="w-full">
-            <nuxt-link to="/about" type="button" class="px-8 w-full block py-3 m-2 text-sm border rounded dark:border-gray-700 dark:text-white">
+            <nuxt-link to="/about" type="button"
+              class="px-8 w-full block py-3 m-2 text-sm border rounded dark:border-gray-700 dark:text-white">
               Learn more
             </nuxt-link>
           </div>
@@ -28,14 +31,15 @@
       </div>
     </div>
     <div>
-      <img :src="require(`~/assets/img/${carouselImages[activeCarouselIndex].url}.jpg`)" alt="" class="w-5/6 h-[500px] object-cover mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-500">
+      <img :src="require(`~/assets/img/${carouselImages[activeCarouselIndex].url}.jpg`)" alt=""
+        class="w-5/6 h-[500px] object-cover mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-500">
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       activeCarouselIndex: 0,
       timer: 0,
@@ -90,29 +94,27 @@ export default {
       ]
     }
   },
-  mounted () {
+  mounted() {
     this.startSlider()
   },
-  unmounted () {
+  unmounted() {
     clearInterval(this.timer)
   },
   methods: {
-    startSlider () {
+    startSlider() {
       this.timer = setInterval(this.next, 5000)
     },
-    next () {
+    next() {
       this.activeCarouselIndex += 1
       if (this.activeCarouselIndex === 5) {
         this.activeCarouselIndex = 0
       }
     },
-    previous () {
+    previous() {
       this.activeCarouselIndex -= 1
     }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

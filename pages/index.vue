@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#003b6d]">
+  <div class="bg-[#3C4142]">
     <hero-section class="" />
     <div class="w-11/12 md:w-10/12 mx-auto rounded-md p-6 text-gray-900 bg-white space-y-6">
       <div>
@@ -7,11 +7,11 @@
       </div>
       <div class="cryptohopper-web-widget" data-id="5" data-news_count="5" data-news_length="10"></div>
     </div>
-    <section class="bg-[#003b6d]">
+    <section class="bg-[#3C4142]">
       <div class="container max-w-xl p-6 py-12 mx-auto space-y-10 lg:px-8 lg:max-w-7xl">
         <div>
           <h2 class="lg:text-3xl text-2xl font-bold text-center sm:text-5xl dark:text-gray-50">
-            Why choose Visionary Trader?
+            Why choose Visionary Gains?
           </h2>
           <p class="mx-auto mt-4 text-sm text-center text-white">
             We use state-of-the-art security measures when handling your account details and personal funds. Your
@@ -96,7 +96,7 @@
                     Firm Regulation
                   </h4>
                   <p class="mt-2 text-white md:text-base text-sm">
-                    Visionary Trader complies with the strictest regulation guidelines, under IFSC (International
+                    Visionary Gains complies with the strictest regulation guidelines, under IFSC (International
                     Financial Services Commission), to ensure the safest trading conditions.
                   </p>
                 </div>
@@ -157,7 +157,7 @@
                       Privacy
                     </h4>
                     <p class="mt-2 text-white md:text-base text-sm">
-                      Visionary Trader is fully compliant with PCI Data Security Standards. We encrypt and protect your
+                      Visionary Gains is fully compliant with PCI Data Security Standards. We encrypt and protect your
                       information, so you never need to worry.
                     </p>
                   </div>

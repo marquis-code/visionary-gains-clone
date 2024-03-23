@@ -1,6 +1,6 @@
 <template>
   <main class="relative">
-    <header class="lg:px-4 py-2 bg-[#003b6d] sticky top-0 z-50">
+    <header class="lg:px-4 py-2 bg-[#3C4142] sticky top-0 z-50">
       <div class="container flex justify-between h-14 mx-auto">
         <nuxt-link rel="noopener noreferrer" to="/" aria-label="Back to homepage" class="flex items-center lg:p-2">
           <img src="@/assets/img/logo.png" class="w-44 lg:w-60" alt="">
@@ -30,9 +30,9 @@
         </button>
       </div>
     </header>
-    <b-sidebar id="sidebar-1" title="Visionary Trader" backdrop-variant="dark" shadow no-header>
+    <b-sidebar id="sidebar-1" title="Visionary Gains" backdrop-variant="dark" shadow no-header>
       <template #default="{ hide }">
-        <div class="flex-1 space-y-6 p-6 bg-[#003b6d] h-screen">
+        <div class="flex-1 space-y-6 p-6 bg-[#3C4142] h-screen">
           <div class="flex justify-between items-center">
             <h4 id="sidebar-no-header-title">
               <!-- <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10"> -->

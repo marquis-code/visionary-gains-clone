@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#003b6d] text-white">
+  <footer class="bg-[#3C4142] text-white">
     <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       <div class="md:flex justify-between items-center space-y-10 md:space-y-0">
         <div class="">
@@ -8,16 +8,12 @@
             <img src="@/assets/img/logo.png" class="w-60" alt="">
           </div>
 
-          <p
-            class="mt-6 max-w-md leading-relaxed  sm:max-w-xs sm:text-left"
-          >
+          <p class="mt-6 max-w-md leading-relaxed  sm:max-w-xs sm:text-left">
             Trade global financial markets on over 1,000 assets Forex, Stocks, Commodities, Indices & Cryptocurrencies
           </p>
         </div>
 
-        <div
-          class="md:flex md:gap-x-10 space-y-10 md:space-y-0"
-        >
+        <div class="md:flex md:gap-x-10 space-y-10 md:space-y-0">
           <div class="sm:text-left">
             <p class="text-lg font-medium ">
               Company
@@ -25,28 +21,19 @@
 
             <ul class="mt-2 space-y-4 text-sm">
               <li>
-                <nuxt-link
-                  class=" transition hover:/75 text-sm"
-                  to="/"
-                >
+                <nuxt-link class=" transition hover:/75 text-sm" to="/">
                   Home
                 </nuxt-link>
               </li>
 
               <li>
-                <nuxt-link
-                  class=" transition hover:/75 text-sm"
-                  to="/about"
-                >
+                <nuxt-link class=" transition hover:/75 text-sm" to="/about">
                   About Us
                 </nuxt-link>
               </li>
 
               <li>
-                <nuxt-link
-                  class=" transition hover:/75 text-sm"
-                  to="/plans"
-                >
+                <nuxt-link class=" transition hover:/75 text-sm" to="/plans">
                   Investment Plans
                 </nuxt-link>
               </li>
@@ -76,57 +63,33 @@
 
                 <div class="flex justify-end items-end">
                   <div class="w-6/12 flex gap-x-3 text-sm">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#ffffff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ><circle cx="12" cy="10" r="3" /><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="10" r="3" />
+                      <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+                    </svg>
                     The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP, United Kingdom
                   </div>
                 </div>
               </li>
               <li class="flex items-center gap-x-4 w-1/2">
                 <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
 
-                <div>support@visionarytrader.com</div>
+                <div>support@visionarygains.com</div>
               </li>
 
               <li class="flex items-center gap-x-4 w-1/2">
                 <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 shrink-0 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 " fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
 
@@ -137,67 +100,36 @@
 
             <ul class="mt-2 space-y-4 text-sm md:hidden">
               <li>
-                <a
-                  class="flex items-center justify-center pr-10 gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                  href="/"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#ffffff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ><circle cx="12" cy="10" r="3" /><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" /></svg>
-
-                  <span class="flex-1 text-sm">The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP, United Kingdom</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                  href="/"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
+                <a class="flex items-center justify-center pr-10 gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                  href="/">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
                   </svg>
 
-                  <span class="flex-1 text-sm">support@visionarytrader.com</span>
+                  <span class="flex-1 text-sm">The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP,
+                    United Kingdom</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end" href="/">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+
+                  <span class="flex-1 text-sm">support@visionarygains.com</span>
                 </a>
               </li>
 
               <li>
-                <a
-                  class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                  href="/"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 shrink-0 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
+                <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end" href="/">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 " fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
 
                   <span class="flex-1 text-sm">+44 7418363214</span>
@@ -213,25 +145,19 @@
           <p class="text-sm ">
             <span class="block sm:inline">All rights reserved.</span>
 
-            <a
-              class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-              href="/"
-            >
+            <a class="inline-block text-teal-600 underline transition hover:text-teal-600/75" href="/">
               Terms & Conditions
             </a>
 
             <span>&middot;</span>
 
-            <a
-              class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-              href="/"
-            >
+            <a class="inline-block text-teal-600 underline transition hover:text-teal-600/75" href="/">
               Privacy Policy
             </a>
           </p>
 
           <p class="mt-4 text-sm  sm:order-first sm:mt-0">
-            &copy; 2023 Visionary Trader.
+            &copy; 2023 Visionary Gains.
           </p>
         </div>
       </div>
@@ -242,7 +168,7 @@
 <script>
 export default {
   name: 'FooterSection',
-  data () {
+  data() {
     return {
       socials: [
         {
@@ -288,6 +214,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

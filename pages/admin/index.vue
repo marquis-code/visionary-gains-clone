@@ -1,6 +1,6 @@
 <template>
-  <main class="bg-[#003b6d] h-screen">
-    <section class="bbg-[#003b6d] flex justify-center items-center pt-20 container mx-auto">
+  <main class="bg-[#3C4142] h-screen">
+    <section class="bbg-[#3C4142] flex justify-center items-center pt-20 container mx-auto">
       <div class="p-4 md:p-8 space-y-3 w-11/12 mx-auto mt-20 bg-white rounded-xl md:w-[500px] border shadow-sm">
         <h1 class="text-2xl font-bold text-center">
           Admin Login

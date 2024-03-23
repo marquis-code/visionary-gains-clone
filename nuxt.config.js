@@ -2,7 +2,7 @@ const path = require('path')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Visionary Trader',
+    title: 'Visionary Gains',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -152,12 +152,12 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      title: 'Visionary Trader',
+      title: 'Visionary Gains',
       author: 'Marquis'
     },
     manifest: {
-      name: 'Visionary Trader',
-      short_name: 'Visionary Trader',
+      name: 'Visionary Gains',
+      short_name: 'Visionary Gains',
       lang: 'en',
       display: 'standalone'
     }

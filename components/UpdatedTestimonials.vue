@@ -43,12 +43,12 @@ export default {
           position: 'Australia'
         },
         {
-          description: 'Financial stability was a challenge until Visionary Trader . I think everyone show try them! ',
+          description: 'Financial stability was a challenge until Visionary Gains . I think everyone show try them! ',
           user: 'Austin Jenkins',
           position: 'Virginia'
         },
         {
-          description: 'Frankly speaking, I sleep better at night knowing that my finances are getting better with Visionary Trader. ',
+          description: 'Frankly speaking, I sleep better at night knowing that my finances are getting better with Visionary Gains. ',
           user: 'Joseph',
           position: 'London'
         }
