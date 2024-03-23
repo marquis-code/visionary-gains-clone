@@ -9,7 +9,7 @@
         <div class="hidden lg:relative lg:block lg:p-12">
           <a class="block text-white" href="/">
             <span class="sr-only">Home</span>
-            <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10">
+            <img src="@/assets/img/logo.png" alt="logo" class="w-48">
           </a>
 
           <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
@@ -30,7 +30,7 @@
             <a class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
               href="/">
               <span class="sr-only">Home</span>
-              <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10">
+              <img src="@/assets/img/logo.png" alt="logo" class="w-48">
             </a>
 
             <h1 class="mt-2 text-2xl font-bold text-gray-200 sm:text-3xl md:text-4xl">

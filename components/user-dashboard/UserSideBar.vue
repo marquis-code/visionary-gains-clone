@@ -7,9 +7,9 @@
         class="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600"
       >
         <img
-          src="@/assets/img/Fidelitysvalues.png"
+          src="@/assets/img/logo.png"
           alt="logo"
-          class="h-10 w-10"
+          class="w-44"
         >
       </span>
 
