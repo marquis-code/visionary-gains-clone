@@ -1,61 +1,35 @@
 <template>
-  <div
-    class="flex w-2/12 h-screen flex-col justify-between bg-blue-50"
-  >
+  <div class="flex w-2/12 h-screen flex-col justify-between bg-blue-50">
     <div class="px-4 py-6 relative">
-      <span
-        class="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600"
-      >
-        <img
-          src="@/assets/img/logo.png"
-          alt="logo"
-          class="w-44"
-        >
+      <span class="grid h-10 w-60 place-content-center rounded-lg text-xs text-gray-600">
+        <img src="@/assets/img/logo.png" alt="logo" class="w-60">
       </span>
 
       <ul class="mt-6 space-y-1 relative">
         <li class="space-y-6">
-          <nuxt-link
-            v-for="{ name, url, icon } in sidebarItems"
-            :key="name"
-            :to="url"
-            class="rounded-md space-y-2 pl-3 py-2.5 text-sm font-light text-gray-700 flex items-center space-x-3"
-          >
+          <nuxt-link v-for="{ name, url, icon } in sidebarItems" :key="name" :to="url"
+            class="rounded-md space-y-2 pl-3 py-2.5 text-sm font-light text-gray-700 flex items-center space-x-3">
             <div class="bg-white shadow-sm h-8 w-8 p-2 rounded-full">
-              <img
-                :src="require(`~/assets/img/${icon}.png`)"
-                alt="icons"
-                class=""
-              >
+              <img :src="require(`~/assets/img/${icon}.png`)" alt="icons" class="">
             </div>
-            <p class="text-gray-600 pb-2">
+            <p class="text-white pb-2">
               {{ name }}
             </p>
           </nuxt-link>
         </li>
       </ul>
-      <!-- <div class="flex justify-center items-center p-10">
-        <div class="absolute bottom-0 w-full p-6">
-          <button class="w-full flex justify-center items-center gap-x-3 py-2.5 mt-16 rounded-md bg-red-500 text-white" @click="handleLogout">
-            Logout
-          </button>
-        </div>
-      </div> -->
     </div>
 
-    <div class="absolute bottom-0 inset-x-0  px-4 py-4 hover:bg-gray-50 space-y-10">
+    <div class="absolute bottom-0 inset-x-0  px-4 py-4 space-y-10">
       <div>
-        <button class="w-full flex justify-center items-center gap-x-3 py-2.5 mt-16 rounded-md bg-red-500 text-white" @click="handleLogout">
+        <button class="w-full flex justify-center items-center gap-x-3 py-2.5 mt-16 rounded-md bg-red-500 text-white"
+          @click="handleLogout">
           Logout
         </button>
       </div>
-      <div class="border-gray-100  bg-white rounded-md p-2">
+      <div class="border-gray-100  rounded-md p-2">
         <div href="#" class="flex items-center gap-2 w-full">
-          <img
-            alt="Man"
-            src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            class="h-10 w-10 rounded-full object-cover"
-          >
+          <img alt="Man" src="@/assets/img/user.svg" class="h-8 w-8 rounded-full border object-cover">
 
           <div>
             <p class="text-xs">
@@ -75,7 +49,7 @@
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 // import 'sweetalert2/src/sweetalert2.scss'
 export default {
-  data () {
+  data() {
     return {
       showMobileNav: false,
       showMobile: false,
@@ -126,13 +100,13 @@ export default {
     }
   },
   watch: {
-    $route () {
+    $route() {
       if (this.isMobile) {
         this.showMobile = !this.showMobile
       }
     }
   },
-  mounted () {
+  mounted() {
     this.onResize()
     window.addEventListener('resize', this.onResize, { passive: true })
     const user = JSON.parse(window.localStorage.getItem('user'))
@@ -143,17 +117,17 @@ export default {
     }
   },
   methods: {
-    onResize () {
+    onResize() {
       this.isMobile = window.innerWidth < 900
     },
-    toggleMobileNavbar () {
+    toggleMobileNavbar() {
       this.showMobileNav = !this.showMobileNav
       this.$emit('toggleNav', this.showMobileNavbar)
     },
-    toggleNavbar () {
+    toggleNavbar() {
       this.showMobile = !this.showMobile
     },
-    handleLogout () {
+    handleLogout() {
       Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -180,6 +154,7 @@ export default {
 .nuxt-link-active {
   font-weight: bold;
 }
+
 /* exact link will show the primary color for only the exact matching link */
 .nuxt-link-exact-active {
   background-color: black;

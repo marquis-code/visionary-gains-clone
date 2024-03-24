@@ -136,7 +136,7 @@
       </div>
     </div>
     <div class="w-full">
-      <div class="flex justify-end items-end bg-white w-full">
+      <div class="flex justify-end items-end md:bg-[#232323] w-full">
         <div class="flex items-center justify-between lg:hidden pr-6 pt-2">
           <div class="-ml-[350px] cursor-pointer" @click="$router.push('/')">
             <img src="@/assets/img/logo.png" class="w-44" alt="">
@@ -167,7 +167,7 @@
           </div>
         </div>
       </div>
-      <div class="p-6 h-screen bg-gray-50 overflow-y-auto">
+      <div class="p-6 h-screen md:bg-[#232323] overflow-y-auto">
         <Nuxt />
       </div>
     </div>

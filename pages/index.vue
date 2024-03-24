@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#3C4142]">
+  <div class="bg-[#303435]">
     <hero-section class="" />
     <div class="w-11/12 md:w-10/12 mx-auto rounded-md p-6 text-gray-900 bg-white space-y-6">
       <div>
@@ -7,7 +7,7 @@
       </div>
       <div class="cryptohopper-web-widget" data-id="5" data-news_count="5" data-news_length="10"></div>
     </div>
-    <section class="bg-[#3C4142]">
+    <section class="bg-[#303435]">
       <div class="container max-w-xl p-6 py-12 mx-auto space-y-10 lg:px-8 lg:max-w-7xl">
         <div>
           <h2 class="lg:text-3xl text-2xl font-bold text-center sm:text-5xl dark:text-gray-50">

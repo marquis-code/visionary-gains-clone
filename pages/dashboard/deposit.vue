@@ -57,14 +57,8 @@
             <input readonly :value="computedWalletAddress"
               class="py-3 bg-gray-100 cursor-not-allowed border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
           </div>
-          <!-- <div class="space-y-1">
-            <label class="text-xs text-gray-700 font-medium">Wallet address</label>
-            <input v-model="form.walletAddress" class="py-3 bg-gray-100 cursor-not-allowed border border-gray-600 text-sm rounded-md w-full outline-none pl-6">
-          </div> -->
           <div class="space-y-1">
             <label class="text-xs text-gray-700 font-medium">Upload Image</label>
-            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css">
-
             <div v-if="!imagePreview" class="max-w-2xl mx-auto">
               <div class="flex items-center justify-center w-full">
                 <label for="dropzone-file"
@@ -241,13 +235,6 @@ export default {
             eth
             btc
             timeAdded
-            admin {
-              firstName
-              lastName
-              email
-              btc
-              eth
-            }
           }
         }
       `
@@ -276,5 +263,3 @@ export default {
   }
 }
 </script>
-
-<style></style>

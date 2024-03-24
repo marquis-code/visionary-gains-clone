@@ -4,30 +4,30 @@
       <p class="border-b pl-6 py-4 text-sm font-semibold">
         Keep Your Profile Up-To-Date
       </p>
-      <form class="p-10 space-y-6" @submit.prevent="updateUser">
+      <form class="p-6 lg:p-10 space-y-6" @submit.prevent="updateUser">
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">First Name</label>
           <input v-model="updatedUserData.firstName" type="text"
-            class="py-2 border rounded-md w-full outline-none pl-6">
+            class="py-2.5 md:py-2 border rounded-md w-full outline-none pl-6 text-sm md:text-base">
           <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
         </div>
 
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Last Name</label>
-          <input v-model="updatedUserData.lastName" type="text" class="py-2 border rounded-md w-full outline-none pl-6">
+          <input v-model="updatedUserData.lastName" type="text" class="py-2.5 md:py-2 text-sm md:text-base border rounded-md w-full outline-none pl-6">
           <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
         </div>
 
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Email address:</label>
-          <input v-model="updatedUserData.email" type="email" class="py-2 border rounded-md w-full outline-none pl-6">
+          <input v-model="updatedUserData.email" type="email" class="py-2.5 md:py-2 text-sm md:text-base border rounded-md w-full outline-none pl-6">
           <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
         </div>
 
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Password:</label>
           <input v-model="updatedUserData.password" type="password"
-            class="py-2 border rounded-md w-full outline-none pl-6">
+            class="py-2.5 md:py-2 border rounded-md w-full outline-none pl-6 text-sm md:text-base">
           <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
         </div>
 

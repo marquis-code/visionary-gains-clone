@@ -178,13 +178,6 @@ export default {
             eth
             btc
             timeAdded
-            admin {
-              firstName
-              lastName
-              email
-              btc
-              eth
-            }
           }
         }
       `

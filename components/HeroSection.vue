@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="dark:bg-[#3C4142]">
+    <div class="dark:bg-[#303435]">
       <div
         class="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-900 space-y-6">
         <h1 class="text-4xl font-bold leadi sm:text-6xl xl:max-w-3xl dark:text-white">

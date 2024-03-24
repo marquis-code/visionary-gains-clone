@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-[#3C4142] h-screen">
-    <section class="bg-[#3C4142] flex justify-center items-center pt-20 container mx-auto">
+  <div class="bg-[#303435] h-screen">
+    <section class="bg-[#303435] flex justify-center items-center pt-20 container mx-auto">
       <div class="w-full max-w-md p-8 space-y-3 rounded-xl bg-white">
         <h1 class="text-2xl font-bold text-center">
           Login
