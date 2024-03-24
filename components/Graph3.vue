@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- <Box title="Graph"> -->
-      <BarChart :height="200" :options="options" :chartdata="chartdata" />
+      <BarChart class="w-full" :height="200" :options="options" :chartdata="chartdata" />
     <!-- </Box> -->
   </div>
 </template>

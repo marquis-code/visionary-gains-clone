@@ -1,11 +1,11 @@
 <template>
   <main class="space-y-10">
     <div>
-      <h1 class="text-gray-800 font-medium">
+      <h1 class="text-white font-medium">
         Statistics
       </h1>
     </div>
-    <div v-if="!loading" class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+    <div v-if="!loading" class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 ">
       <div v-for="(item, index) in computedStats" :key="index"
         class="h-32 rounded-lg bg-black flex items-center gap-x-3 pl-6">
         <div :class="item.classStyle" class="rounded-full h-10 w-10 flex justify-center items-center">
@@ -24,8 +24,8 @@
     <div v-else class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
       <loader v-for="itm in 4" :key="itm" />
     </div>
-    <div class="md:flex w-full gap-x-10 pt-6 space-y-6 lg:space-y-0">
-      <div class="h-full rounded-lg md:w-6/12 py-3 bg-gray-200 border space-y-6">
+    <div class="lg:flex w-full gap-x-10 pt-6 space-y-6 lg:space-y-0">
+      <div class="h-full rounded-lg lg:w-6/12 py-3 bg-gray-200 border space-y-6">
         <div class="flex justify-between items-center px-6">
           <p class="font-medium">
             Active Visitors
@@ -40,7 +40,7 @@
         </div>
         <graph-3 />
       </div>
-      <div class="h-full rounded-lg md:w-6/12 py-3 bg-gray-200 border space-y-6">
+      <div class="h-full rounded-lg lg:w-6/12 py-3 bg-gray-200 border space-y-6">
         <div class="flex justify-between items-center px-6">
           <p class="font-medium">
             Wallet Usage

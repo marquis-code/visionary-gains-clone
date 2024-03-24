@@ -2,7 +2,7 @@
   <main>
     <main class="space-y-10">
       <div class="flex justify-between items-center">
-        <h1 class="text-gray-800 font-medium">
+        <h1 class="text-white font-medium">
           Overview
         </h1>
         <button type="button" class="px-3 py-2 rounded-full text-white bg-black" @click="handleProfitUpdate">
