@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-2/12 h-screen flex-col justify-between bg-blue-50">
+  <div class="flex w-2/12 h-screen flex-col justify-between bg-black">
     <div class="px-4 py-6 relative">
       <span class="grid h-10 w-60 place-content-center rounded-lg text-xs text-gray-600">
         <img src="@/assets/img/logo.png" alt="logo" class="w-60">

@@ -1,6 +1,6 @@
 <template>
   <main class="flex bg-[#030303]">
-    <user-side-bar class="bg-[#030303] border border-red-500 sticky text-white top-0 hidden lg:block" />
+    <user-side-bar class="bg-[#030303]  sticky text-white top-0 hidden lg:block" />
     <div class=" w-full flex-1">
       <div class="sticky top-0 z-50">
         <user-header />

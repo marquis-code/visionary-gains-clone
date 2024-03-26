@@ -11,10 +11,11 @@
       </button>
       <b-sidebar id="sidebar-1" title="Sidebar" no-header shadow backdrop>
         <template #default="{ hide }">
-          <div class="p-3 z-50 bg-[#030303]">
-            <div class="flex justify-between items-center">
-              <h4 id="sidebar-no-header-title">
-                <img src="@/assets/img/logo.png" alt="logo" class="w-60">
+          <div class="p-3 z-50 bg-[#030303] text-white">
+            <div class="flex justify-between items-center text-white">
+              <h4 class="text-white" id="sidebar-no-header-title text-xl pl-4">
+                Visionary Gains
+                <!-- <img src="@/assets/img/logo.png" alt="logo" class="w-60"> -->
                 <!-- <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10"> -->
               </h4>
               <button @click="hide">
@@ -28,11 +29,11 @@
             <nav class="mb-3 flex justify-between flex-col">
               <ul class="mt-6 space-y-1">
                 <li class="space-y-6">
-                  <nuxt-link v-for="{ name, url, icon } in sidebarItems" :key="name" :to="url"
+                  <nuxt-link @click.prevent="v-b-toggle.sidebar-1" v-for="{ name, url, icon } in sidebarItems" :key="name" :to="url"
                     class="rounded-md space-y-2 pl-3 py-2.5 text-sm font-light text-gray-700 flex items-center space-x-3">
-                    <div class="bg-white shadow-sm h-8 w-8 p-2 rounded-full">
+                    <!-- <div class="shadow-sm h-8 w-8 p-2 rounded-full">
                       <img :src="require(`~/assets/img/${icon}.png`)" alt="icons" class="">
-                    </div>
+                    </div> -->
                     <p class="text-white pb-2">
                       {{ name }}
                     </p>
@@ -78,7 +79,7 @@
       <div class="rounded-full border p-0.5">
         <img src="@/assets/img/user.svg" class="h-8 w-8 rounded-full" alt="userIcon">
       </div>
-      <div class="bg-white rounded-full border p-0.5">
+      <div class="bg-black rounded-full border p-0.5">
         <img src="@/assets/img/notification.svg" class="h-8 w-8 rounded-full" alt="notificationIcon">
       </div>
     </div>
