@@ -3,8 +3,10 @@
     <div class="hidden lg:flex h-screen flex-col sticky top-0 justify-between border-e bg-[#030303] w-72">
       <div class="px-4 py-6">
         <span class="grid h-10 w-60 place-content-center rounded-lg">
-          <button rel="noopener noreferrer" to="/admin/dashboard" aria-label="Back to homepage" class="flex items-center p-2">
+          <button rel="noopener noreferrer" to="/admin/dashboard" aria-label="Back to homepage"
+            class="flex items-center p-2">
             <img src="@/assets/img/logo.png" alt="logo" class="w-60">
+            <!-- <h1 class="text-white font-semibold">Visionary Gains</h1> -->
           </button>
         </span>
 
@@ -88,10 +90,10 @@
       </div>
     </div>
     <div class="w-full">
-      <div class="flex justify-end items-end md:bg-[#232323] w-full">
-        <div class="flex items-center justify-between lg:hidden pr-6 pt-2">
-          <div class="-ml-[350px] cursor-pointer" @click="$router.push('/admin/dashboard')">
-            <img src="@/assets/img/logo.png" alt="logo" class="w-60">
+      <div class="flex lg:hidden justify-between items-center px-3 md:bg-[#232323] w-full pt-3 ">
+        <!-- <div class="flex items-center justify-between lg:hidden pr-6 pt-2 border-2 border-red-500">
+          <div class="-ml-[350px] cursor-pointer border-2 border-red-500" @click="$router.push('/admin/dashboard')">
+            <h1 class="text-white font-semibold">Visionary Gains</h1>
           </div>
           <div>
             <button class="p-2" @click="toggleNavbar">
@@ -112,6 +114,19 @@
             <img src="https://source.unsplash.com/50x50/?portrait" alt=""
               class="w-10 h-10 border rounded-full dark:bg-gray-500 dark:border-gray-700">
           </div>
+        </div> -->
+        <div>
+          <img src="@/assets/img/logo.png" alt="logo" class="w-60">
+          <!-- <h1 class="text-white font-semibold font-mono test-xl">Visionary Trader</h1> -->
+        </div>
+        <div>
+          <svg @click="toggleNavbar" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </div>
       </div>
       <div class="p-6 h-screen md:bg-[#232323] overflow-y-auto">

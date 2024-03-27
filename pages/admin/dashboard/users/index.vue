@@ -351,7 +351,6 @@ export default {
           }
         }
       `
-
       try {
         const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
           method: 'POST',
@@ -408,7 +407,7 @@ export default {
             body: JSON.stringify({
               query: updateUserMutation,
               variables: {
-                userId: user?.id ?? '',
+                userId: this.selectedUser.id ?? '',
                 input: {
                   profit: this.selectedUser.profit,
                   tradingBalance: this.selectedUser.tradingBalance,

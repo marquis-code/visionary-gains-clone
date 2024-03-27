@@ -189,7 +189,7 @@ export default {
   },
   computed: {
     isFormEmpty() {
-      return !!(this.updatedUserData.firstName && this.updatedUserData.lastName && this.updatedUserData.email && this.updatedUserData.password)
+      return !!(this.updatedUserData.firstName && this.updatedUserData.lastName && this.updatedUserData.email)
     }
   },
   mounted() {
