@@ -1,6 +1,5 @@
 const path = require('path')
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Visionary Gains',
     meta: [
@@ -61,24 +60,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['@nuxtjs/moment', '@nuxt/postcss8'],
-  // graphql: {
-  //   /**
-  //    * An Object of your GraphQL clients
-  //    */
-  //   clients: {
-  //     default: {
-  //       /**
-  //        * The client endpoint url
-  //        */
-  //       endpoint: 'https://visionary-zpui.onrender.com/graphql/query',
-  //       /**
-  //        * Per-client options overrides
-  //        * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
-  //        */
-  //       options: {}
-  //     }
-  //   }
-  // },
   loadingIndicator: {
     name: 'chasing-dots',
     color: 'purple',
