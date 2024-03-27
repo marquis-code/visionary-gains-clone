@@ -385,7 +385,7 @@ export default {
     async updateUserInfo() {
       this.processing = true
       const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      const user = JSON.parse(window.localStorage.getItem('user'))
+      // const user = JSON.parse(window.localStorage.getItem('user')) 6601d7a9e6b9dbf55606f18e
       try {
         const updateUserMutation = `
           mutation updateUser($userId: String!, $input: UpdateUser!) {

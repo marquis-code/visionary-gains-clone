@@ -68,7 +68,7 @@
                       <circle cx="12" cy="10" r="3" />
                       <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
                     </svg>
-                    The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP, United Kingdom
+                    <!-- The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP, United Kingdom -->
                   </div>
                 </div>
               </li>
@@ -93,7 +93,7 @@
                   </svg>
                 </div>
 
-                <div> +44 7418363214</div>
+                <!-- <div> +44 7418363214</div> -->
               </li>
             </ul>
             <!-- </div> -->
@@ -107,9 +107,9 @@
                     <circle cx="12" cy="10" r="3" />
                     <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
                   </svg>
-
+<!--
                   <span class="flex-1 text-sm">The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP,
-                    United Kingdom</span>
+                    United Kingdom</span> -->
                 </a>
               </li>
               <li>
@@ -132,7 +132,7 @@
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
 
-                  <span class="flex-1 text-sm">+44 7418363214</span>
+                  <!-- <span class="flex-1 text-sm">+44 7418363214</span> -->
                 </a>
               </li>
             </ul>
