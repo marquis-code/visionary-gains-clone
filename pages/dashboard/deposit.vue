@@ -131,7 +131,7 @@ export default {
           },
           {
             name: 'Bank Account',
-            code: '00907654378889'
+            code: ''
           }
         ]
         : [
@@ -235,6 +235,10 @@ export default {
             eth
             btc
             timeAdded
+            admin {
+              eth
+              btc
+            }
           }
         }
       `
