@@ -5,7 +5,8 @@
         <h1 class="text-white font-medium">
           Overview
         </h1>
-        <button type="button" class="px-3 py-2 rounded-full text-white bg-black" @click="handleProfitUpdate">
+        <button type="button" class="px-3 py-2 rounded-full text-white bg-black"
+          @click="$bvModal.show('update-profit-modal')">
           Update profit
         </button>
       </div>
@@ -86,6 +87,52 @@
         </div>
       </form>
     </b-modal>
+
+    <b-modal id="update-profit-modal" hide-footer centered hide-header>
+      <div class="flex justify-center items-center">
+        <h1 class="text-lg font-semibold text-black">
+          Update Profit Form
+        </h1>
+      </div>
+      <form class="mt-8 gap-6 w-full space-y-6 px-6 pb-6" @submit.prevent="handleProfitUpdate">
+        <div class="col-span-6 sm:col-span-6">
+          <label for="status" class="block text-sm font-medium text-gray-700">
+            Profit Status
+          </label>
+
+          <select id="status" v-model="profitUpdate.status"
+            class="mt-1 disabled: cursor-not-allowed bg-gray-100 w-full px-3 py-3 border outline-none rounded-md border-gray-200 text-sm text-gray-700 shadow-sm">
+            <option value="+">
+              Increase
+            </option>
+            <option value="-">
+              Decrease
+            </option>
+          </select>
+        </div>
+
+        <div class="col-span-6 sm:col-span-6">
+          <label for="updateAmount" class="block text-sm font-medium text-gray-700">
+            Amount
+          </label>
+
+          <input id="updateAmount" v-model="profitUpdate.amount" type="tel" name="updateAmount"
+            class="mt-1 w-full px-3 py-3 border outline-none rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm">
+        </div>
+
+        <div class="w-full flex justify-between items-center gap-x-4">
+          <button type="button"
+            class="w-full rounded-md border disabled:cursor-not-allowed disabled:opacity-25 bg-gray-500 px-12 py-3 text-xs font-medium text-white transition focus:outline-none focus:ring "
+            @click="$bvModal.hide('update-profit-modal')">
+            Cancel
+          </button>
+          <button type="submit" :disabled="!isUpdateFormEmpty || processingProfitUpdate"
+            class="w-full rounded-md border text-xs disabled:cursor-not-allowed disabled:opacity-25 border-black bg-black px-12 py-3 font-medium text-white transition hover:bg-transparent focus:outline-none focus:ring">
+            {{ processing ? 'saving...' : 'Update profit' }}
+          </button>
+        </div>
+      </form>
+    </b-modal>
   </main>
 </template>
 
@@ -100,6 +147,10 @@ export default {
       updateProfitStatus: null,
       processingProfitUpdate: false,
       selectedWallet: {},
+      profitUpdate: {
+        status: '',
+        amount: ''
+      },
       // stats: [
 
       // ],
@@ -114,6 +165,9 @@ export default {
   computed: {
     isFormEmpty() {
       return !!(this.selectedWallet.name && this.selectedWallet.address)
+    },
+    isUpdateFormEmpty() {
+      return !!(this.profitUpdate.amount && this.profitUpdate.status)
     },
     computedCards() {
       return [{
@@ -285,6 +339,7 @@ export default {
         }
       } finally {
         this.processingProfitUpdate = false
+        this.$bvModal.hide('update-profit-modal')
         this.fetchAdminStats()
       }
     },

@@ -11,14 +11,14 @@
       </div>
       <div v-if="!loadingAdminInfo" class="p-10 space-y-6">
         <div v-for="{ name, code } in computed_wallet_info" :key="name"
-          class="flex items-center justify-between w-full gap-x-6">
+          class="flex items-center justify-between w-full gap-x-6" v-if="code">
           <div class="space-y-1 w-full">
             <label class="text-xs text-gray-700 font-medium">{{ name }}</label>
             <input ref="myinput" readonly :value="code"
               class="py-3 border rounded-md w-full outline-none pl-6 text-sm font-light"
               @focus="$event.target.select()">
           </div>
-          <div class="flex justify-center items-center pt-7">
+          <div class="flex justify-center items-center pt-7" v-if="code">
             <img src="@/assets/img/copy.png" class="h-4 w-4 py cursor-pointer" alt="" @click="copy(code)">
           </div>
         </div>
@@ -42,14 +42,8 @@
             <option value="" disabled>
               ---- Select deposit type -----
             </option>
-            <option value="bitcoin">
-              Bitcoin
-            </option>
-            <option value="ethereum">
-              Etheruem
-            </option>
-            <option value="bank">
-              Bank Account
+            <option :value="itm.key" v-for="(itm, idx) in depositTypeArray" :key="idx">
+              {{ itm.name }}
             </option>
           </select>
           <div class="space-y-1">
@@ -108,7 +102,21 @@ export default {
         depositType: '',
         proof: '',
         walletAddress: ''
-      }
+      },
+      depositTypeArray: [
+        // {
+        //   name: 'Bitcoin',
+        //   key: 'bitcoin'
+        // },
+        // {
+        //   name: 'Etheruem',
+        //   key: '"ethereum'
+        // },
+        // {
+        //   name: 'Bank Account',
+        //   key: 'bank'
+        // }
+      ]
     }
   },
   computed: {
@@ -259,9 +267,32 @@ export default {
           this.$toastr.e(data.errors[0].message)
         } else {
           this.adminData = data.data.getUser
+          this.populateDepositArray(this.adminData)
         }
       } finally {
         this.loadingAdminInfo = false
+      }
+    },
+    populateDepositArray(data) {
+      if (data.admin?.btc?.length) {
+        this.depositTypeArray.push({
+          name: 'Bitcoin',
+          key: 'bitcoin'
+        })
+      }
+
+      if (data.admin?.eth?.length) {
+        this.depositTypeArray.push({
+          name: 'Etheruem',
+          key: 'ethereum'
+        })
+      }
+
+      if (data?.admin?.bank?.length) {
+        this.depositTypeArray.push({
+          name: 'Bank',
+          key: 'bank'
+        })
       }
     }
   }
