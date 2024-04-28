@@ -265,9 +265,10 @@ export default {
     },
     async fetchTransactions() {
       this.loading = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
-      const query = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        this.loading = true
+        const query = `
         query {
           getTransactions {
             id
@@ -295,25 +296,26 @@ export default {
         }
       `
 
-      try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query
+        try {
+          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: 'Bearer ' + accessToken
+            },
+            body: JSON.stringify({
+              query
+            })
           })
-        })
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.transactionsList = data.data.getTransactions
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.transactionsList = data.data.getTransactions
+          }
+        } finally {
+          this.loading = false
         }
-      } finally {
-        this.loading = false
       }
     }
   }

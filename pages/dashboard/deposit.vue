@@ -22,6 +22,9 @@
             <img src="@/assets/img/copy.png" class="h-4 w-4 py cursor-pointer" alt="" @click="copy(code)">
           </div>
         </div>
+        <div class="my-6">
+          <a href="https://www.binance.com" target="_blank" class="bg-black px-6 py-2.5 rounded-md text-white">Buy Crypto</a>
+        </div>
       </div>
       <api-loader v-else />
     </section>

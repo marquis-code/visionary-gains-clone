@@ -1,6 +1,6 @@
 <template>
-  <main class="lg:flex justify-start items-start gap-x-10 space-y-10 lg:space-y-0">
-    <section class="bg-white lg:w-5/12 rounded-md border">
+  <main class="">
+    <section class="bg-white max-w-md rounded-md border">
       <p class="border-b pl-6 py-4 text-sm font-semibold">
         Keep Your Profile Up-To-Date
       </p>

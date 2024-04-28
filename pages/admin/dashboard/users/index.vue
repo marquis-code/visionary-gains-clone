@@ -140,7 +140,7 @@
           Update Information
         </h1>
       </div>
-      <form class="mt-8 gap-6 w-full space-y-6 px-6 pb-6" @submit.prevent="updateUserInfo">
+      <form class="gap-6 w-full space-y-6 px-6 pb-6" @submit.prevent="updateUserInfo">
         <div class="col-span-6 sm:col-span-6">
           <label for="profit" class="block text-sm font-medium text-gray-700">
             Profit
@@ -167,18 +167,6 @@
           <input id="accountBalance" v-model="selectedUser.accountBalance" type="number" step="0.01" min="0"
             name="accountBalance"
             class="mt-1 w-full px-3 py-3 border outline-none rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm">
-        </div>
-
-        <div class="w-full flex justify-between items-center gap-x-4">
-          <button type="button"
-            class="w-full rounded-md border disabled:cursor-not-allowed disabled:opacity-25 bg-gray-500 px-12 py-3 text-xs font-medium text-white transition focus:outline-none focus:ring "
-            @click="$bvModal.hide('updateUserInfo')">
-            Cancel
-          </button>
-          <button type="submit" :disabled="processing"
-            class="w-full rounded-md border text-xs disabled:cursor-not-allowed disabled:opacity-25 border-black bg-black px-12 py-3 font-medium text-white transition hover:bg-transparent focus:outline-none focus:ring">
-            Continue
-          </button>
         </div>
       </form>
     </b-modal>
@@ -331,9 +319,10 @@ export default {
     },
     async fetchUsers() {
       this.loading = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
-      const query = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        this.loading = true
+        const query = `
         query {
           getUsers {
             id
@@ -351,26 +340,27 @@ export default {
           }
         }
       `
-      try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query
+        try {
+          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: 'Bearer ' + accessToken
+            },
+            body: JSON.stringify({
+              query
+            })
           })
-        })
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.usersList = data.data.getUsers
-          this.totalRows = data.data.getUsers.length
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.usersList = data.data.getUsers
+            this.totalRows = data.data.getUsers.length
+          }
+        } finally {
+          this.loading = false
         }
-      } finally {
-        this.loading = false
       }
     },
     getInitials(firstName, lastName) {
@@ -384,10 +374,11 @@ export default {
     },
     async updateUserInfo() {
       this.processing = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      // const user = JSON.parse(window.localStorage.getItem('user')) 6601d7a9e6b9dbf55606f18e
-      try {
-        const updateUserMutation = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        // const user = JSON.parse(window.localStorage.getItem('user')) 6601d7a9e6b9dbf55606f18e
+        try {
+          const updateUserMutation = `
           mutation updateUser($userId: String!, $input: UpdateUser!) {
             updateUser(userId: $userId, input: $input) {
               accountBalance
@@ -396,36 +387,37 @@ export default {
             }
           }
         `
-        const response = await fetch(
-          'https://visionary-zpui.onrender.com/graphql/query',
-          {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json',
-              authorization: 'Bearer ' + accessToken
-            },
-            body: JSON.stringify({
-              query: updateUserMutation,
-              variables: {
-                userId: this.selectedUser.id ?? '',
-                input: {
-                  profit: this.selectedUser.profit,
-                  tradingBalance: this.selectedUser.tradingBalance,
-                  accountBalance: this.selectedUser.accountBalance
+          const response = await fetch(
+            'https://visionary-zpui.onrender.com/graphql/query',
+            {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json',
+                authorization: 'Bearer ' + accessToken
+              },
+              body: JSON.stringify({
+                query: updateUserMutation,
+                variables: {
+                  userId: this.selectedUser.id ?? '',
+                  input: {
+                    profit: this.selectedUser.profit,
+                    tradingBalance: this.selectedUser.tradingBalance,
+                    accountBalance: this.selectedUser.accountBalance
+                  }
                 }
-              }
-            })
+              })
+            }
+          )
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.$toastr.s('User Information was updated successfully')
+            this.$bvModal.hide('updateUserInfo')
           }
-        )
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.$toastr.s('User Information was updated successfully')
-          this.$bvModal.hide('updateUserInfo')
+        } finally {
+          this.processing = false
         }
-      } finally {
-        this.processing = false
       }
     },
     formatNumberAsDollar(number) {

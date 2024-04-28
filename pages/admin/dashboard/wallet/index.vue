@@ -212,10 +212,11 @@ export default {
     },
     async updateWallet() {
       this.processing = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      const user = JSON.parse(window.localStorage.getItem('user'))
-      try {
-        const updateUserMutation = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        const user = JSON.parse(window.localStorage.getItem('user'))
+        try {
+          const updateUserMutation = `
           mutation updateUser($userId: String!, $input: UpdateUser!) {
             updateUser(userId: $userId, input: $input) {
               id
@@ -233,51 +234,53 @@ export default {
             }
           }
         `
-        const input = this.selectedWallet.value === 'btc'
-          ? {
-            btc: this.selectedWallet.address
-          }
-          : this.selectedWallet.value === 'eth'
+          const input = this.selectedWallet.value === 'btc'
             ? {
-              eth: this.selectedWallet.address
+              btc: this.selectedWallet.address
             }
-            : {
-              btc: this.selectedWallet.address,
-              eth: this.selectedWallet.address
-            }
-        const response = await fetch(
-          'https://visionary-zpui.onrender.com/graphql/query',
-          {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json',
-              authorization: 'Bearer ' + accessToken
-            },
-            body: JSON.stringify({
-              query: updateUserMutation,
-              variables: {
-                userId: user?.id ?? '',
-                input
+            : this.selectedWallet.value === 'eth'
+              ? {
+                eth: this.selectedWallet.address
               }
-            })
+              : {
+                btc: this.selectedWallet.address,
+                eth: this.selectedWallet.address
+              }
+          const response = await fetch(
+            'https://visionary-zpui.onrender.com/graphql/query',
+            {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json',
+                authorization: 'Bearer ' + accessToken
+              },
+              body: JSON.stringify({
+                query: updateUserMutation,
+                variables: {
+                  userId: user?.id ?? '',
+                  input
+                }
+              })
+            }
+          )
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.$toastr.s(`${this.selectedWallet?.name} wallet address was successfully updated`)
+            this.$bvModal.hide('wallet-update')
           }
-        )
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.$toastr.s(`${this.selectedWallet?.name} wallet address was successfully updated`)
-          this.$bvModal.hide('wallet-update')
+        } finally {
+          this.processing = false
         }
-      } finally {
-        this.processing = false
       }
     },
     async fetchAdminStats() {
       this.loading = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
-      const query = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        this.loading = true
+        const query = `
         query {
           getAdminStats {
             totalProfit
@@ -289,65 +292,69 @@ export default {
         }
       `
 
-      try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query
+        try {
+          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: 'Bearer ' + accessToken
+            },
+            body: JSON.stringify({
+              query
+            })
           })
-        })
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.tradingBalance = data?.data?.getAdminStats?.tradingBalance
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.tradingBalance = data?.data?.getAdminStats?.tradingBalance
+          }
+        } finally {
+          this.loading = false
         }
-      } finally {
-        this.loading = false
       }
     },
     async handleProfitUpdate() {
       this.processingProfitUpdate = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
-      const mutation = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        this.loading = true
+        const mutation = `
         mutation {
           updateProfits
         }
       `
 
-      try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query: mutation
+        try {
+          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: 'Bearer ' + accessToken
+            },
+            body: JSON.stringify({
+              query: mutation
+            })
           })
-        })
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.updateProfitStatus = data.data.updateProfits
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.updateProfitStatus = data.data.updateProfits
+          }
+        } finally {
+          this.processingProfitUpdate = false
+          this.$bvModal.hide('update-profit-modal')
+          this.fetchAdminStats()
         }
-      } finally {
-        this.processingProfitUpdate = false
-        this.$bvModal.hide('update-profit-modal')
-        this.fetchAdminStats()
       }
     },
     async getUserInfo() {
       this.loading = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
-      const query = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        this.loading = true
+        const query = `
         query {
           getUser {
             id
@@ -366,25 +373,26 @@ export default {
         }
       `
 
-      try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query
+        try {
+          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: 'Bearer ' + accessToken
+            },
+            body: JSON.stringify({
+              query
+            })
           })
-        })
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.updatedUserData = data.data.getUser
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.updatedUserData = data.data.getUser
+          }
+        } finally {
+          this.loading = false
         }
-      } finally {
-        this.loading = false
       }
     },
     formatNumberAsDollar(number) {

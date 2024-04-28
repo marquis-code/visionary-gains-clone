@@ -291,9 +291,10 @@ export default {
     },
     async fetchTransactions() {
       this.loading = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
-      const query = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        this.loading = true
+        const query = `
         query {
           getTransactions {
             id
@@ -321,26 +322,27 @@ export default {
         }
       `
 
-      try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query
+        try {
+          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: 'Bearer ' + accessToken
+            },
+            body: JSON.stringify({
+              query
+            })
           })
-        })
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.transactionsList = data.data.getTransactions.filter(itm => itm.transactionType === 'Deposit')
-          this.totalRows = this.transactionsList.length
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.transactionsList = data.data.getTransactions.filter(itm => itm.transactionType === 'Deposit')
+            this.totalRows = this.transactionsList.length
+          }
+        } finally {
+          this.loading = false
         }
-      } finally {
-        this.loading = false
       }
     },
     getInitials(firstName, lastName) {
@@ -381,39 +383,41 @@ export default {
     },
     async processTransaction(transactionId, status) {
       this.processing = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      const statusType = status === 'approve' ? 'Approved' : status === 'reject' ? 'Declined' : 'Pending'
-      try {
-        const processTransactionQuery = `
+      if (process.client) {
+        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
+        const statusType = status === 'approve' ? 'Approved' : status === 'reject' ? 'Declined' : 'Pending'
+        try {
+          const processTransactionQuery = `
             mutation ProcessTransaction($transactionID: String!, $status: TransactionStatus!) {
               processTransaction(transactionID: $transactionID, status: $status)
             }
           `
-        const response = await fetch(
-          'https://visionary-zpui.onrender.com/graphql/query',
-          {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json',
-              authorization: 'Bearer ' + accessToken
-            },
-            body: JSON.stringify({
-              query: processTransactionQuery,
-              variables: {
-                transactionID: transactionId,
-                status: statusType
-              }
-            })
+          const response = await fetch(
+            'https://visionary-zpui.onrender.com/graphql/query',
+            {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json',
+                authorization: 'Bearer ' + accessToken
+              },
+              body: JSON.stringify({
+                query: processTransactionQuery,
+                variables: {
+                  transactionID: transactionId,
+                  status: statusType
+                }
+              })
+            }
+          )
+          const data = await response.json()
+          if (data?.errors) {
+            this.$toastr.e(data.errors[0].message)
+          } else {
+            this.$toastr.s(`You have successfully ${status === 'approve' ? 'Approved' : 'Rejected'} this transaction.`)
           }
-        )
-        const data = await response.json()
-        if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
-        } else {
-          this.$toastr.s(`You have successfully ${status === 'approve' ? 'Approved' : 'Rejected'} this transaction.`)
+        } finally {
+          this.processing = false
         }
-      } finally {
-        this.processing = false
       }
     },
     formatNumberAsDollar(number) {
