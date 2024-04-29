@@ -168,6 +168,10 @@
             name="accountBalance"
             class="mt-1 w-full px-3 py-3 border outline-none rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm">
         </div>
+
+        <div class="w-full pt-10">
+          <button :disabled="processing" type="submit" class="bg-black disabled:cursor-not-allowed disabled:opacity-25 w-full text-white py-2.5 rounded-md">{{ processing ? 'processing' : 'Submit' }}</button>
+        </div>
       </form>
     </b-modal>
   </main>
