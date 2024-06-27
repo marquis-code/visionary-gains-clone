@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="">
-          <a href="https://www.binance.com" target="_blank" class="bg-black px-6 m-6 py-2.5 rounded-md text-white">Buy
+          <a href="http://bitcoin.com/" target="_blank" class="bg-black px-6 m-6 py-2.5 rounded-md text-white">Buy
             Crypto</a>
         </div>
       </div>

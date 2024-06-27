@@ -54,10 +54,16 @@ export default {
   data() {
     return {
       teams: [
+        // {
+        //   name: 'George Hovey',
+        //   title: 'Executive Director',
+        //   img: 'ceoMale.jpeg',
+        //   profileUrl: 'ceo'
+        // },
         {
-          name: 'George Hovey',
+          name: 'Deborah Myers',
           title: 'Executive Director',
-          img: 'ceoMale.jpeg',
+          img: 'ceoFemale.jpeg',
           profileUrl: 'ceo'
         },
         {
