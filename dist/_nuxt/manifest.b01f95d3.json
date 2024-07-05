@@ -1,0 +1,10 @@
+{
+  "name": "Visionary Gains",
+  "short_name": "Visionary Gains",
+  "description": "",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
