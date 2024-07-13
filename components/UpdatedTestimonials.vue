@@ -43,12 +43,12 @@ export default {
           position: 'Australia'
         },
         {
-          description: 'Financial stability was a challenge until Visionary Gains . I think everyone show try them! ',
+          description: 'Financial stability was a challenge until Lucent Gains . I think everyone show try them! ',
           user: 'Austin Jenkins',
           position: 'Virginia'
         },
         {
-          description: 'Frankly speaking, I sleep better at night knowing that my finances are getting better with Visionary Gains. ',
+          description: 'Frankly speaking, I sleep better at night knowing that my finances are getting better with Lucent Gains. ',
           user: 'Joseph',
           position: 'London'
         }

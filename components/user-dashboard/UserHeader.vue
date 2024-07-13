@@ -14,7 +14,7 @@
           <div class="p-3 z-50 bg-[#030303] text-white">
             <div class="flex justify-between items-center text-white">
               <h4 class="text-white" id="sidebar-no-header-title text-xl pl-4">
-                Visionary Gains
+                Lucent Gains
                 <!-- <img src="@/assets/img/logo.png" alt="logo" class="w-60"> -->
                 <!-- <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10"> -->
               </h4>

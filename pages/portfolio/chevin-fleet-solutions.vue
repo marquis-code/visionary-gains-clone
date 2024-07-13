@@ -85,7 +85,7 @@ export default {
         },
         {
           title: 'Fund',
-          description: 'MEIF Visionary Gains Debt Finance'
+          description: 'MEIF Lucent Gains Debt Finance'
         },
         {
           title: 'Status',

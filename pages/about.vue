@@ -9,7 +9,7 @@
 
           <p
             class="text-center text-sm md:text-base max-w-2xl text-white/90 md:mt-6 md:block font-medium md:leading-relaxed">
-            Visionary Gains is a leading private equity and property manager, with around 100 executives based across
+            Lucent Gains is a leading private equity and property manager, with around 100 executives based across
             our UK office network. We partner with ambitious, entrepreneurial management teams to accelerate growth, and
             serve thousands of investors with the goal of delivering exceptional returns.
           </p>
@@ -50,9 +50,9 @@
           </h1>
           <div class="space-y-4">
             <p class="lg:w-2/3 mx-auto leading-relaxed text-sm md:text-base">
-              Visionary Gains was formed in 2009 following a management buyout of the private equity business of
+              Lucent Gains was formed in 2009 following a management buyout of the private equity business of
               Aberdeen Asset Management PLC. The senior team who led the transaction have worked together since 2004 and
-              have transformed Visionary Gains into one of the UK’s most active SME investors, helping hundreds of
+              have transformed Lucent Gains into one of the UK’s most active SME investors, helping hundreds of
               management teams to achieve their business ambitions.
             </p>
 
@@ -62,7 +62,7 @@
               companies.
             </p>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-sm md:text-base">
-              In 2021 Visionary Gains was acquired by Mattioli Woods PLC, a leading provider of specialist wealth
+              In 2021 Lucent Gains was acquired by Mattioli Woods PLC, a leading provider of specialist wealth
               management and financial planning services. This partnership continues our ethos of supporting ambition,
               working with like-minded people who share the same passion and enthusiasm for delivering exceptional
               client outcomes.
@@ -84,7 +84,7 @@
 
                 <div class="p-8 sm:p-16 lg:p-24">
                   <h2 class="text-xl font-bold sm:text-3xl">
-                    Meet the Visionary Gains team
+                    Meet the Lucent Gains team
                   </h2>
 
                   <p class="mt-4 text-gray-600 leading-loose">
@@ -181,7 +181,7 @@
                   </div>
                   <div class="flex-grow pl-4">
                     <p class="leading-relaxed text-sm md:text-base">
-                      Visionary Gains is a signatory to the Investing in Women Code, a commitment to support the
+                      Lucent Gains is a signatory to the Investing in Women Code, a commitment to support the
                       advancement of female entrepreneurship in the UK.
                     </p>
                   </div>

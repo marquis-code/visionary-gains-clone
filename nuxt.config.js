@@ -1,7 +1,7 @@
 const path = require('path')
 export default {
   head: {
-    title: 'Visionary Gains',
+    title: 'Lucent Gains',
     target: 'static',
     meta: [
       { charset: 'utf-8' },
@@ -134,12 +134,12 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      title: 'Visionary Gains',
+      title: 'Lucent Gains',
       author: 'Marquis'
     },
     manifest: {
-      name: 'Visionary Gains',
-      short_name: 'Visionary Gains',
+      name: 'Lucent Gains',
+      short_name: 'Lucent Gains',
       lang: 'en',
       display: 'standalone'
     }

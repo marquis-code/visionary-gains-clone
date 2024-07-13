@@ -11,7 +11,7 @@
       <div class="container max-w-xl p-6 py-12 mx-auto space-y-10 lg:px-8 lg:max-w-7xl">
         <div>
           <h2 class="lg:text-3xl text-2xl font-bold text-center sm:text-5xl dark:text-gray-50">
-            Why choose Visionary Gains?
+            Why choose Lucent Gains?
           </h2>
           <p class="mx-auto mt-4 text-sm text-center text-white">
             We use state-of-the-art security measures when handling your account details and personal funds. Your
@@ -96,7 +96,7 @@
                     Firm Regulation
                   </h4>
                   <p class="mt-2 text-white md:text-base text-sm">
-                    Visionary Gains complies with the strictest regulation guidelines, under IFSC (International
+                    Lucent Gains complies with the strictest regulation guidelines, under IFSC (International
                     Financial Services Commission), to ensure the safest trading conditions.
                   </p>
                 </div>
@@ -157,7 +157,7 @@
                       Privacy
                     </h4>
                     <p class="mt-2 text-white md:text-base text-sm">
-                      Visionary Gains is fully compliant with PCI Data Security Standards. We encrypt and protect your
+                      Lucent Gains is fully compliant with PCI Data Security Standards. We encrypt and protect your
                       information, so you never need to worry.
                     </p>
                   </div>

@@ -26,13 +26,13 @@
       <div class="lg:flex flex-col lg:flex-row lg:gap-x-10 space-y-10 lg:space-y-0">
         <div class="lg:w-6/12 order-last">
           <p class="text-gray-900 text-base leading-loose">
-            In December 2018 Visionary Gains Investor Partners exited from Indigo Belcom generating a 4.2x return in
+            In December 2018 Lucent Gains Investor Partners exited from Indigo Belcom generating a 4.2x return in
             just two years since it first invested. Indigo designs, installs and maintains telecom networks across the
             UK and Europe, enabling customers such as Vodafone, Sky and BT to deliver fixed line, broadband, mobile and
             other data services to a wide variety of corporate, enterprise and consumer end users.
           </p>
           <p class="text-gray-800 text-base leading-loose mt-10">
-            Visionary Gains supported the business with the strategic acquisition of Belcom247 in September 2017,
+            Lucent Gains supported the business with the strategic acquisition of Belcom247 in September 2017,
             together forming the enlarged Indigo-Belcom Group. Following the successful acquisition, revenues increased
             from £12 million to a forecast of over £30 million in the year the exit completed, with underlying profits
             increasing from £1.3 million to over £4 million.
@@ -55,7 +55,7 @@
             The business has grown tremendously in the last two years following the MBO. As well as the acquisition and
             integration of Belcom247, the Group has grown organically at an exceptional rate, expanded into new state of
             the art facilities, and doubled headcount. It’s been an exciting period and we have welcomed the support and
-            financial backing Visionary Gains during this time.
+            financial backing Lucent Gains during this time.
           </p>
           <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6" />
           <p class="text-gray-500 font-semibold">

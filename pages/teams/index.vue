@@ -8,7 +8,7 @@
           </h2>
 
           <p class="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
-            At Visionary Gains we understand the importance of having a local presence. That’s why our team is located
+            At Lucent Gains we understand the importance of having a local presence. That’s why our team is located
             across a network of regional offices putting us at the heart of the main centres of UK business and
             transaction activity.
           </p>

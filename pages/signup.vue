@@ -13,7 +13,7 @@
           </a>
 
           <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-            Welcome to Visionary Gains
+            Welcome to Lucent Gains
           </h2>
 
           <p class="mt-4 leading-relaxed text-white/90">
@@ -34,7 +34,7 @@
             </a>
 
             <h1 class="mt-2 text-2xl font-bold text-gray-200 sm:text-3xl md:text-4xl">
-              Welcome to Visionary Gains
+              Welcome to Lucent Gains
             </h1>
 
             <p class="mt-4 leading-relaxed text-sm text-white">
@@ -161,7 +161,7 @@ export default {
         `
 
         const response = await fetch(
-          'https://visionary-zpui.onrender.com/graphql/query',
+          'https://Lucent-zpui.onrender.com/graphql/query',
           {
             method: 'POST',
             headers: {
