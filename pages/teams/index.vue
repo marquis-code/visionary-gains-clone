@@ -54,18 +54,18 @@ export default {
   data() {
     return {
       teams: [
-        // {
-        //   name: 'George Hovey',
-        //   title: 'Executive Director',
-        //   img: 'ceoMale.jpeg',
-        //   profileUrl: 'ceo'
-        // },
         {
-          name: 'Deborah Myers',
+          name: 'George Hovey',
           title: 'Executive Director',
-          img: 'ceoFemale.jpeg',
+          img: 'ceoMale.jpeg',
           profileUrl: 'ceo'
         },
+        // {
+        //   name: 'Deborah Myers',
+        //   title: 'Executive Director',
+        //   img: 'ceoFemale.jpeg',
+        //   profileUrl: 'ceo'
+        // },
         {
           name: 'Breanna Marrie Riley',
           title: 'Investment Manager',

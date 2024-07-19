@@ -14,7 +14,7 @@
               </div>
               <div class="flex flex-col items-center text-center justify-center">
                 <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">
-                  Deborah Myers
+                  George Hovey
                 </h2>
                 <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" />
                 <div class="bg-black rounded-md p-3 text-white text-left space-y-4 container">
@@ -23,7 +23,7 @@
                       Office
                     </p>
                     <p class="font-light text-sm Md:text-base">
-                      Maryland, USA.
+                      Denver, USA
                     </p>
                   </div>
                   <div>
@@ -39,25 +39,24 @@
             </div>
             <div
               class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0  sm:text-left">
-              <img alt="content" class="object-cover object-center h-[500px] w-full" src="@/assets/img/ceoFemale.jpeg">
+              <img alt="content" class="object-cover object-center h-[500px] w-full" src="@/assets/img/ceoMale.jpeg">
               <p class="leading-relaxed text-base md:text-lg mb-4">
-                Deborah Myers is a seasoned executive with extensive experience in the finance and investment industry. As the CEO of Lucent Gains, a leading firm in financial management, Deborah is based in Maryland, USA. With over 15 years in the industry, she has showcased her exceptional ability to lead organizations and deliver strategic financial solutions.
-
+                George Hovey is an accomplished professional with a strong background in financial investment. As the Executive Director at Visionary Trader, a leading financial investment company, George is based in Denver, Colorado. With over 10 years of experience, he has demonstrated exceptional skills in managing clients' portfolios and providing valuable financial advice.
               </p>
 
               <p class="leading-relaxed text-base md:text-lg mb-4">
-                Deborah holds a degree in Finance, providing her with a deep understanding of market dynamics and investment strategies. Her expertise in developing innovative financial products and identifying lucrative investment opportunities has significantly contributed to the growth and success of Prosper Investments.
+                George holds a degree in Accounting, which has equipped him with a solid foundation in understanding the intricacies of financial markets. His expertise in analyzing market trends and identifying profitable investment opportunities has proven instrumental in helping clients achieve their financial goals.
               </p>
 
               <p class="leading-relaxed text-base md:text-lg mb-4">
-                Throughout her career, Deborah has been recognized for her exceptional leadership and contributions to the finance sector. She has received numerous awards for her outstanding performance and dedication to excellence, reinforcing her reputation as a trusted and influential leader.
+                Throughout his career, George has been recognized for his outstanding contributions to the field of finance. He has been awarded numerous prestigious accolades in recognition of his exceptional performance, demonstrating his commitment to excellence and delivering results.
               </p>
 
               <p class="leading-relaxed text-base md:text-lg mb-4">
-                Outside of her professional life, Deborah is passionate about mentoring young professionals and promoting financial literacy. She believes in the importance of empowering individuals with the knowledge and skills to achieve financial independence. Additionally, Deborah enjoys exploring global cultures through travel, which enriches her perspective and approach to business.
+                Beyond his professional achievements, George is also a fitness enthusiast who believes in maintaining a healthy and balanced lifestyle. He values the importance of physical well-being and actively engages in activities that promote personal fitness. Moreover, George finds fulfillment in helping others, both in his professional and personal life. He takes great pleasure in assisting clients in reaching their financial aspirations and supporting individuals in their personal growth.
               </p>
               <p class="leading-relaxed text-base md:text-lg mb-4">
-                With her extensive experience, strategic vision, and commitment to excellence, Deborah Myers is a highly respected figure in the finance and investment industry.
+                With his extensive experience, strong financial acumen, and commitment to client success, George Hovey is a trusted and respected figure in the financial investment industry
               </p>
             </div>
           </div>

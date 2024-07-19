@@ -7,28 +7,52 @@
       <form class="p-6 lg:p-10 space-y-6" @submit.prevent="updateUser">
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">First Name</label>
-          <input v-model="updatedUserData.firstName" type="text"
-            class="py-2.5 md:py-2 border rounded-md w-full outline-none pl-6 text-sm md:text-base">
-          <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
+          <input
+            v-model="updatedUserData.firstName"
+            type="text"
+            class="py-2.5 md:py-2 border rounded-md w-full outline-none pl-6 text-sm md:text-base"
+          />
+          <span class="text-xs text-gray-500"
+            >We'll never share your details with anyone else</span
+          >
         </div>
 
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Last Name</label>
-          <input v-model="updatedUserData.lastName" type="text" class="py-2.5 md:py-2 text-sm md:text-base border rounded-md w-full outline-none pl-6">
-          <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
+          <input
+            v-model="updatedUserData.lastName"
+            type="text"
+            class="py-2.5 md:py-2 text-sm md:text-base border rounded-md w-full outline-none pl-6"
+          />
+          <span class="text-xs text-gray-500"
+            >We'll never share your details with anyone else</span
+          >
         </div>
 
         <div class="space-y-1">
-          <label class="text-xs text-gray-700 font-medium">Email address:</label>
-          <input v-model="updatedUserData.email" type="email" class="py-2.5 md:py-2 text-sm md:text-base border rounded-md w-full outline-none pl-6">
-          <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
+          <label class="text-xs text-gray-700 font-medium"
+            >Email address:</label
+          >
+          <input
+            v-model="updatedUserData.email"
+            type="email"
+            class="py-2.5 md:py-2 text-sm md:text-base border rounded-md w-full outline-none pl-6"
+          />
+          <span class="text-xs text-gray-500"
+            >We'll never share your details with anyone else</span
+          >
         </div>
 
         <div class="space-y-1">
           <label class="text-xs text-gray-700 font-medium">Password:</label>
-          <input v-model="updatedUserData.password" type="password"
-            class="py-2.5 md:py-2 border rounded-md w-full outline-none pl-6 text-sm md:text-base">
-          <span class="text-xs text-gray-500">We'll never share your details with anyone else</span>
+          <input
+            v-model="updatedUserData.password"
+            type="password"
+            class="py-2.5 md:py-2 border rounded-md w-full outline-none pl-6 text-sm md:text-base"
+          />
+          <span class="text-xs text-gray-500"
+            >We'll never share your details with anyone else</span
+          >
         </div>
 
         <!-- <div class="space-y-1">
@@ -36,9 +60,12 @@
           <input v-model="updatedUserData.walletAddress" type="text" class="py-2 border rounded-md w-full outline-none pl-6">
         </div> -->
         <div class="w-full">
-          <button :disabled="!isFormEmpty" :class="[!isFormEmpty ? 'opacity-25 cursor-not-allowed' : null]"
-            class="bg-green-500 w-full disabled:cursor-not-allowed disabled:opacity-25 text-white rounded-lg px-6 py-3 text-sm">
-            {{ processing ? 'processing...' : 'Update' }}
+          <button
+            :disabled="!isFormEmpty"
+            :class="[!isFormEmpty ? 'opacity-25 cursor-not-allowed' : null]"
+            class="bg-green-500 w-full disabled:cursor-not-allowed disabled:opacity-25 text-white rounded-lg px-6 py-3 text-sm"
+          >
+            {{ processing ? "processing..." : "Update" }}
           </button>
         </div>
       </form>
@@ -174,32 +201,36 @@
 
 <script>
 export default {
-  layout: 'user-dashboard',
+  layout: "user-dashboard",
   data() {
     return {
-      userId: '12345',
+      userId: "12345",
       processing: false,
       updatedUserData: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: ''
-      }
-    }
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+      },
+    };
   },
   computed: {
     isFormEmpty() {
-      return !!(this.updatedUserData.firstName && this.updatedUserData.lastName && this.updatedUserData.email)
-    }
+      return !!(
+        this.updatedUserData.firstName &&
+        this.updatedUserData.lastName &&
+        this.updatedUserData.email
+      );
+    },
   },
   mounted() {
-    this.getUserInfo()
+    this.getUserInfo();
   },
   methods: {
     async updateUser() {
-      this.processing = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      const user = JSON.parse(window.localStorage.getItem('user'))
+      this.processing = true;
+      const accessToken = JSON.parse(window.localStorage.getItem("auth"));
+      const user = JSON.parse(window.localStorage.getItem("user"));
       try {
         const updateUserMutation = `
           mutation updateUser($userId: String!, $input: UpdateUser!) {
@@ -218,43 +249,43 @@ export default {
               timeAdded
             }
           }
-        `
+        `;
         const response = await fetch(
-          'https://visionary-zpui.onrender.com/graphql/query',
+          "https://lucent-kq5b.onrender.com/graphql/query",
           {
-            method: 'POST',
+            method: "POST",
             headers: {
-              'content-type': 'application/json',
-              authorization: 'Bearer ' + accessToken
+              "content-type": "application/json",
+              authorization: "Bearer " + accessToken,
             },
             body: JSON.stringify({
               query: updateUserMutation,
               variables: {
-                userId: user?.id ?? '',
+                userId: user?.id ?? "",
                 input: {
                   firstName: this.updatedUserData.firstName,
                   lastName: this.updatedUserData.lastName,
                   password: this.updatedUserData.password,
-                  email: this.updatedUserData.email
-                }
-              }
-            })
+                  email: this.updatedUserData.email,
+                },
+              },
+            }),
           }
-        )
-        const data = await response.json()
+        );
+        const data = await response.json();
         if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
+          this.$toastr.e(data.errors[0].message);
         } else {
-          this.$toastr.s('You have successfully updated your profile')
+          this.$toastr.s("You have successfully updated your profile");
         }
       } finally {
-        this.processing = false
+        this.processing = false;
       }
     },
     async getUserInfo() {
-      this.loading = true
-      const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-      this.loading = true
+      this.loading = true;
+      const accessToken = JSON.parse(window.localStorage.getItem("auth"));
+      this.loading = true;
       const query = `
         query {
           getUser {
@@ -272,31 +303,34 @@ export default {
             timeAdded
           }
         }
-      `
+      `;
 
       try {
-        const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + accessToken
-          },
-          body: JSON.stringify({
-            query
-          })
-        })
-        const data = await response.json()
+        const response = await fetch(
+          "https://lucent-kq5b.onrender.com/graphql/query",
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              authorization: "Bearer " + accessToken,
+            },
+            body: JSON.stringify({
+              query,
+            }),
+          }
+        );
+        const data = await response.json();
         if (data?.errors) {
-          this.$toastr.e(data.errors[0].message)
+          this.$toastr.e(data.errors[0].message);
         } else {
-          this.updatedUserData = data.data.getUser
+          this.updatedUserData = data.data.getUser;
         }
       } finally {
-        this.loading = false
+        this.loading = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style></style>

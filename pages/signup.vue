@@ -161,7 +161,7 @@ export default {
         `
 
         const response = await fetch(
-          'https://Lucent-zpui.onrender.com/graphql/query',
+          'https://lucent-kq5b.onrender.com/graphql/query',
           {
             method: 'POST',
             headers: {

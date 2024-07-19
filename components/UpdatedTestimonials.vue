@@ -14,7 +14,7 @@
         "{{ testimonials[activeTestimonyIndex].description }}"
       </p>
       <div class="flex justify-center space-x-3">
-        <img src="https://source.unsplash.com/80x80/?portrait?1" alt=""
+        <img src="@/assets/icons/testimonial-avatar.svg" alt=""
           class="w-10 h-10 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700">
         <div>
           <p class="leadi text-white">

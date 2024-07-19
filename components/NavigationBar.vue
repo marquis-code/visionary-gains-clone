@@ -2,8 +2,8 @@
   <main class="relative">
     <header class="lg:px-4 py-2 bg-[#303435] sticky top-0 z-50">
       <div class="container flex justify-between h-14 mx-auto">
-        <nuxt-link rel="noopener noreferrer" to="/" aria-label="Back to homepage" class="flex items-center mt-6 lg:p-2">
-          <img src="@/assets/img/logo.png" class="w-44 lg:w-60" alt="">
+        <nuxt-link rel="noopener noreferrer" to="/" aria-label="Back to homepage" class="flex items-center mt-10 lg:p-2">
+          <img src="@/assets/img/logo.png" class="w-32 lg:w-32" alt="">
         </nuxt-link>
         <ul class="items-stretch hidden space-x-3 lg:flex">
           <li class="flex items-center gap-x-3">
@@ -36,7 +36,7 @@
           <div class="flex justify-between items-center">
             <h4 id="sidebar-no-header-title">
               <!-- <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10"> -->
-              <img src="@/assets/img/logo.png" class="w-44" alt="">
+              <img src="@/assets/img/logo.png" class="w-32" alt="">
             </h4>
             <button @click="hide">
               <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" fill="none"

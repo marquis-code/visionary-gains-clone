@@ -7,7 +7,7 @@
         <div class="">
           <div class="flex justify-center text-teal-600 sm:justify-start">
             <!-- <img src="@/assets/img/Fidelitysvalues.png" class="p-0.5 h-10 w-10" alt=""> -->
-            <img src="@/assets/img/logo.png" class="w-60 h-10" alt="" />
+            <img src="@/assets/img/logo.png" class="w-60" alt="" />
           </div>
 
           <p class="mt-6 max-w-md leading-relaxed sm:max-w-xs sm:text-left">
@@ -66,7 +66,7 @@
                   ><circle cx="12" cy="10" r="3" /><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" /></svg>
                 </div> -->
 
-                <!-- <div class="flex justify-end items-end">
+                <div class="flex justify-end items-end">
                   <div class="w-6/12 flex gap-x-3 text-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -84,9 +84,10 @@
                         d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"
                       />
                     </svg>
-                    The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP, United Kingdom
+                    9 Pangkham Street, Vientiane, Laos 801 City West Boulevard ,
+                    Houston, Texas
                   </div>
-                </div> -->
+                </div>
               </li>
               <li class="flex items-center gap-x-4 w-1/2">
                 <div>
@@ -106,7 +107,11 @@
                   </svg>
                 </div>
 
-                <div>support@lucentgains.com</div>
+                <div>
+                  <a href="mailto:support@lucentgains.com"
+                    >support@lucentgains.com</a
+                  >
+                </div>
               </li>
 
               <li class="flex items-center gap-x-4 w-1/2">
@@ -127,25 +132,47 @@
                   </svg>
                 </div>
 
-                <div>+44 7418363214</div>
+                <div>
+                  <p>
+                    <a href="tel:+14092106218">+1 409 210 6218</a>
+                  </p>
+                  <p>
+                    <a href="tel:+8562091967483">+856 20 91 967 483</a>
+                  </p>
+                </div>
               </li>
             </ul>
             <!-- </div> -->
 
             <ul class="mt-2 space-y-4 text-sm md:hidden">
-              <!-- <li>
-                <a class="flex items-center justify-center pr-10 gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                  href="/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <li>
+                <a
+                  class="flex items-center justify-center pr-10 gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                  href="/"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <circle cx="12" cy="10" r="3" />
-                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+                    <path
+                      d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"
+                    />
                   </svg>
 
-                  <span class="flex-1 text-sm">The Business xchange Hub, Sunley house, 4 Bedford Park, Croydon 2AP,
-                    United Kingdom</span>
+                  <div class="flex-1 text-sm">
+                    <p>9 Pangkham Street, Vientiane, Laos</p>
+                    <p>801 City West Boulevard , Houston, Texas</p>
+                  </div>
                 </a>
-              </li> -->
+              </li>
               <li>
                 <a
                   class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
@@ -166,21 +193,46 @@
                     />
                   </svg>
 
-                  <span class="flex-1 text-sm">support@lucentgains.com</span>
+                  <span class="flex-1 text-sm">
+                    <a href="mailto:support@lucentgains.com"
+                      >support@lucentgains.com</a
+                    >
+                  </span>
                 </a>
               </li>
 
-              <!-- <li>
-                <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end" href="/">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 " fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              <li>
+                <a
+                  class="flex items-center justify-start gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                  href="/"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
                   </svg>
 
-                  <span class="flex-1 text-sm">+44 7418363214</span>
+                  <!-- <span class="flex-1 text-sm">+44 7418363214</span> -->
+
+                  <div>
+                    <p>
+                      <a href="tel:+14092106218">+1 409 210 6218</a>
+                    </p>
+                    <p>
+                      <a href="tel:+8562091967483">+856 20 91 967 483</a>
+                    </p>
+                  </div>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div>
         </div>

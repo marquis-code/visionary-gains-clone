@@ -4,9 +4,21 @@
       <!-- <b-container> -->
       <section class="text-white">
         <div class="flex items-center justify-between my-3">
-          <button class="outline-none border bg-gray-200 text-black px-3 py-1 rounded-md text-sm" @click="goBack()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none"
-              stroke="#747070" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel">
+          <button
+            class="outline-none border bg-gray-200 text-black px-3 py-1 rounded-md text-sm"
+            @click="goBack()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#747070"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="bevel"
+            >
               <path d="M19 12H6M12 5l-7 7 7 7" />
             </svg>
           </button>
@@ -15,12 +27,24 @@
         <div class="sm:flex-1 pb-0 mt-3">
           <label for="search" class="sr-only">Search</label>
 
-          <input v-model="search" type="text" placeholder="Search.."
-            class="w-full rounded-tr-md rounded-tl-md outline-none bg-white p-3 text-gray-700 transition border focus:border-white focus:outline-none focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent">
+          <input
+            v-model="search"
+            type="text"
+            placeholder="Search.."
+            class="w-full rounded-tr-md rounded-tl-md outline-none bg-white p-3 text-gray-700 transition border focus:border-white focus:outline-none focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent"
+          />
         </div>
         <b-card class="mt-3">
-          <b-table striped show-empty responsive :items="transactionsList" :fields="fields" :busy="loading"
-            :current-page="currentPage" :per-page="perPage">
+          <b-table
+            striped
+            show-empty
+            responsive
+            :items="transactionsList"
+            :fields="fields"
+            :busy="loading"
+            :current-page="currentPage"
+            :per-page="perPage"
+          >
             <template #table-busy>
               <div class="text-center my-2 cursor-pointer">
                 <b-spinner class="align-middle" />
@@ -31,65 +55,84 @@
             <template #empty>
               <p class="text-center text-sm text-secondary py-2 cursor-pointer">
                 {{
-            search
-              ? `No Transactions found for search value: "${search}"`
-              : "No Transactions available"
-          }}
+                  search
+                    ? `No Transactions found for search value: "${search}"`
+                    : "No Transactions available"
+                }}
               </p>
             </template>
 
             <template #cell(sn)="data">
               <span class="font-medium py-2 text-sm cursor-pointer">
-                {{ data.index + 1 }}</span>
+                {{ data.index + 1 }}</span
+              >
             </template>
 
             <template #cell(amount)="data">
               <span class="font-medium py-2 text-sm cursor-pointer">
-                {{
-            data?.item?.amount
-          }}
+                {{ data?.item?.amount }}
               </span>
             </template>
 
             <template #cell(wallet)="data">
               <span class="font-medium py-2 text-sm cursor-pointer">
-                {{
-            data?.item?.wallet }}</span>
+                {{ data?.item?.wallet }}</span
+              >
             </template>
 
             <template #cell(transactionType)="data">
               <span class="font-medium py-2 text-sm">
-                {{ data?.item?.transactionType }}</span>
+                {{ data?.item?.transactionType }}</span
+              >
             </template>
 
             <template #cell(transactionStatus)="data">
               <span class="font-medium py-2 text-sm cursor-pointer">
-                {{
-            data?.item?.transactionStatus }}</span>
+                {{ data?.item?.transactionStatus }}</span
+              >
             </template>
 
             <template #cell(user)="data">
               <span class="font-medium py-2 text-sm">
-                {{ data?.item?.user }}</span>
+                {{ data?.item?.user }}</span
+              >
             </template>
 
             <template #cell(proof)="data">
               <span class="font-medium py-2 text-sm">{{
-            data?.item?.proof
-          }}</span>
+                data?.item?.proof
+              }}</span>
             </template>
 
             <template #cell(timeAdded)="data">
-              <span class="font-medium py-2 text-sm">{{ data.item.timeAdded }}</span>
+              <span class="font-medium py-2 text-sm">{{
+                data.item.timeAdded
+              }}</span>
             </template>
 
             <template #cell(actions)="data">
-              <b-dropdown size="sm" variant="link" class="position-relative text-center w-100"
-                :toggle-class="'text-decoration-none'" :disabled="downloading" :no-caret="true" right>
+              <b-dropdown
+                size="sm"
+                variant="link"
+                class="position-relative text-center w-100"
+                :toggle-class="'text-decoration-none'"
+                :disabled="downloading"
+                :no-caret="true"
+                right
+              >
                 <template #button-content>
                   <div class="flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <circle cx="12" cy="12" r="1" />
                       <circle cx="12" cy="5" r="1" />
                       <circle cx="12" cy="19" r="1" />
@@ -129,7 +172,13 @@
           </b-table>
 
           <div class="flex justify-end items-end">
-            <b-pagination v-model="currentPage" :total-rows="totalRows" :per-page="perPage" size="md" class="my-3" />
+            <b-pagination
+              v-model="currentPage"
+              :total-rows="totalRows"
+              :per-page="perPage"
+              size="md"
+              class="my-3"
+            />
           </div>
         </b-card>
         <!-- </div> -->
@@ -141,133 +190,133 @@
 
 <script>
 export default {
-  name: 'Objective',
-  layout: 'dashboards',
+  name: "Objective",
+  layout: "dashboards",
   scrollToTop: true,
   data() {
     return {
       transactionsList: [],
       fields: [
         {
-          key: 'sn',
-          label: 'S/N',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "sn",
+          label: "S/N",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'amount',
-          label: 'Amount',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "amount",
+          label: "Amount",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'wallet',
-          label: 'Wallet',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "wallet",
+          label: "Wallet",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'transactionType',
-          label: 'Transaction Type',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "transactionType",
+          label: "Transaction Type",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'transactionStatus',
-          label: 'Transaction Status',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "transactionStatus",
+          label: "Transaction Status",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'user',
-          label: 'User',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "user",
+          label: "User",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'proof',
-          label: 'Proof',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "proof",
+          label: "Proof",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'timeAdded',
-          label: 'Time Addes',
-          class: 'font-medium text-gray-400 text-sm'
+          key: "timeAdded",
+          label: "Time Addes",
+          class: "font-medium text-gray-400 text-sm",
         },
         {
-          key: 'actions',
-          label: 'Actions',
-          class: 'font-medium text-end text-gray-400'
-        }
+          key: "actions",
+          label: "Actions",
+          class: "font-medium text-end text-gray-400",
+        },
       ],
       currentPage: 1,
       perPage: 7,
-      search: '',
+      search: "",
       showModal: false,
       totalRows: 1,
-      loading: false
-    }
+      loading: false,
+    };
   },
   head() {
     return {
       meta: [
         {
-          hid: 'twitter:title',
-          name: 'twitter:title',
-          content: this.title
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.title,
         },
         {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: this.description
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.description,
         },
         {
-          hid: 'twitter:image',
-          name: 'twitter:image',
-          content: this.image
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: this.image,
         },
         {
-          hid: 'twitter:image:alt',
-          name: 'twitter:image:alt',
-          content: this.title
+          hid: "twitter:image:alt",
+          name: "twitter:image:alt",
+          content: this.title,
         },
         {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.title
+          hid: "og:title",
+          property: "og:title",
+          content: this.title,
         },
         {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.description
+          hid: "og:description",
+          property: "og:description",
+          content: this.description,
         },
         {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.image
+          hid: "og:image",
+          property: "og:image",
+          content: this.image,
         },
         {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: this.image
+          hid: "og:image:secure_url",
+          property: "og:image:secure_url",
+          content: this.image,
         },
         {
-          hid: 'og:image:alt',
-          property: 'og:image:alt',
-          content: this.title
-        }
-      ]
-    }
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: this.title,
+        },
+      ],
+    };
   },
   created() {
-    this.fetchTransactions()
+    this.fetchTransactions();
   },
   mounted() {
-    this.totalRows = this.transactionsList.length
+    this.totalRows = this.transactionsList.length;
   },
   methods: {
     goBack() {
-      this.$router.go(-1)
+      this.$router.go(-1);
     },
     async fetchTransactions() {
-      this.loading = true
+      this.loading = true;
       if (process.client) {
-        const accessToken = JSON.parse(window.localStorage.getItem('auth'))
-        this.loading = true
+        const accessToken = JSON.parse(window.localStorage.getItem("auth"));
+        this.loading = true;
         const query = `
         query {
           getTransactions {
@@ -294,32 +343,35 @@ export default {
             timeAdded
           }
         }
-      `
+      `;
 
         try {
-          const response = await fetch('https://visionary-zpui.onrender.com/graphql/query', {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json',
-              authorization: 'Bearer ' + accessToken
-            },
-            body: JSON.stringify({
-              query
-            })
-          })
-          const data = await response.json()
+          const response = await fetch(
+            "https://lucent-kq5b.onrender.com/graphql/query",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+                authorization: "Bearer " + accessToken,
+              },
+              body: JSON.stringify({
+                query,
+              }),
+            }
+          );
+          const data = await response.json();
           if (data?.errors) {
-            this.$toastr.e(data.errors[0].message)
+            this.$toastr.e(data.errors[0].message);
           } else {
-            this.transactionsList = data.data.getTransactions
+            this.transactionsList = data.data.getTransactions;
           }
         } finally {
-          this.loading = false
+          this.loading = false;
         }
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

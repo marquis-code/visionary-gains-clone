@@ -64,7 +64,7 @@ export default {
         `
       try {
         const response = await fetch(
-          'https://visionary-zpui.onrender.com/graphql/query', {
+          'https://lucent-kq5b.onrender.com/graphql/query', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
