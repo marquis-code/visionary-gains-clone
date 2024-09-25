@@ -1,6 +1,6 @@
 <template>
   <main
-    class="lg:flex justify-start items-start gap-x-10 space-y-10 lg:space-y-0"
+    class="lg:flex h-screen overflow-y-auto justify-start items-start gap-x-10 space-y-10 lg:space-y-0"
   >
     <section class="bg-white lg:w-7/12 rounded-md border">
       <div class="border-b pl-6 py-4 text-sm font-semibold">
@@ -155,7 +155,7 @@
 
 <script>
 export default {
-  layout: "user-dashboard",
+  layout: "customer-dashboard",
   data() {
     return {
       depositType: "",

@@ -1,6 +1,6 @@
 <template>
   <main
-    class="lg:flex justify-start items-start gap-x-10 space-y-10 lg:space-y-0"
+    class="lg:flex h-screen overflow-y-auto justify-start items-start gap-x-10 space-y-10 lg:space-y-0"
   >
     <section class="bg-white lg:w-5/12 rounded-md border">
       <p class="border-b text-sm font-semibold py-4 pl-6">
@@ -60,7 +60,7 @@
 import ApiLoader from "@/components/ApiLoader.vue";
 export default {
   components: { ApiLoader },
-  layout: "user-dashboard",
+  layout: "customer-dashboard",
   data() {
     return {
       depositType: "",

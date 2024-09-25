@@ -1,4 +1,5 @@
 <template>
+ <main class="h-screen" >
   <section class="bg-white">
     <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
       <aside
@@ -74,11 +75,12 @@
       </main>
     </div>
   </section>
+ </main>
 </template>
 
 <script>
 export default {
-  layout: 'dashboards',
+  layout: 'admin-dashboard',
   data () {
     return {
       loading: false,

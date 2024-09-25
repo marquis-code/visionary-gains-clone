@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#303435] text-white">
+  <footer class="bg-[#4169E1] text-white">
     <div
       class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24"
     >
@@ -7,7 +7,7 @@
         <div class="">
           <div class="flex justify-center text-teal-600 sm:justify-start">
             <!-- <img src="@/assets/img/Fidelitysvalues.png" class="p-0.5 h-10 w-10" alt=""> -->
-            <img src="@/assets/img/logo.png" class="w-60" alt="" />
+            <img src="@/assets/img/logoUpdate.png" class="w-60" alt="" />
           </div>
 
           <p class="mt-6 max-w-md leading-relaxed sm:max-w-xs sm:text-left">

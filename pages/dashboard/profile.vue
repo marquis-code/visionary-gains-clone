@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <main class="h-screen overflow-y-auto">
     <section class="bg-white max-w-md rounded-md border">
       <p class="border-b pl-6 py-4 text-sm font-semibold">
         Keep Your Profile Up-To-Date
@@ -201,7 +201,7 @@
 
 <script>
 export default {
-  layout: "user-dashboard",
+  layout: "customer-dashboard",
   data() {
     return {
       userId: "12345",

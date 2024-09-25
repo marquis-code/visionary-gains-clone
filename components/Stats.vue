@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#303435]">
+  <section class="bg-[#4169E1]">
     <section class="text-gray-600 body-font">
       <!-- <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col text-center w-full mb-20">
@@ -71,22 +71,22 @@
 
 <script>
 export default {
-  name: 'Stats',
+  name: "Stats",
   data() {
     return {
       stats: [
         {
-          name: 'Active Expert Traders',
-          value: '700'
+          name: "Active Expert Traders",
+          value: "700",
         },
         {
-          name: 'Expert Financial Consultants',
-          value: '556'
+          name: "Expert Financial Consultants",
+          value: "556",
         },
         {
-          name: 'Satisfied Clients',
-          value: '11,912'
-        }
+          name: "Satisfied Clients",
+          value: "11,912",
+        },
         // {
         //   name: 'Reviews',
         //   value: '1000+'
@@ -94,25 +94,25 @@ export default {
       ],
       teams: [
         {
-          name: 'Breanna Marrie Riley',
-          title: 'CEO',
-          img: 'investment-manager-one.jpeg',
-          profileUrl: 'ceo'
+          name: "Breanna Marrie Riley",
+          title: "CEO",
+          img: "investment-manager-one.jpeg",
+          profileUrl: "ceo",
         },
         {
-          name: 'Sonia Ann Lindsey',
-          title: 'Investment Manager',
-          img: 'investment-manager-two.jpeg',
-          profileUrl: 'investment-manager'
+          name: "Sonia Ann Lindsey",
+          title: "Investment Manager",
+          img: "investment-manager-two.jpeg",
+          profileUrl: "investment-manager",
         },
         {
-          name: 'Adam Lehan Thomson',
-          title: ' Investment Director',
-          img: 'investment-director.jpeg',
-          profileUrl: 'investment-director'
-        }
-      ]
-    }
-  }
-}
+          name: "Adam Lehan Thomson",
+          title: " Investment Director",
+          img: "investment-director.jpeg",
+          profileUrl: "investment-director",
+        },
+      ],
+    };
+  },
+};
 </script>

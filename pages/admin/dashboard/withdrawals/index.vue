@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="h-screen" >
     <Transition name="fade">
       <section class="text-white">
         <div class="flex items-center justify-between my-3">
@@ -212,7 +212,7 @@ export default {
   components: {
     EnlargeableImage,
   },
-  layout: "dashboards",
+  layout: "admin-dashboard",
   scrollToTop: true,
   data() {
     return {

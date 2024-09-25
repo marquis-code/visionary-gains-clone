@@ -5,7 +5,7 @@
       <div class="sticky top-0 z-50">
         <user-header />
       </div>
-      <div class="md:p-3 md:border-[0.4px] md:shadow-md md:bg-[#232323] h-screen md:rounded-lg m-3 z-0">
+      <div class="md:p-3 overflow-y-auto md:border-[0.4px] md:shadow-md md:bg-[#232323] h-screen md:rounded-lg m-3 z-0">
         <Nuxt />
       </div>
     </div>

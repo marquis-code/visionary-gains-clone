@@ -3,7 +3,10 @@
     <navigation-bar />
     <Nuxt />
     <footer-section />
-    <div id="floating-div" class="fixed bottom-0 left-0 p-2 bg-gray-800 text-white">
+    <div
+      id="floating-div"
+      class="fixed bottom-0 left-0 p-2 bg-[#4169E1] text-white"
+    >
       <div
         id="cr-widget-marquee"
         data-coins="bitcoin,ethereum,tether,ripple,cardano"

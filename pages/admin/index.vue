@@ -1,7 +1,7 @@
 <template>
-  <main class="bg-[#303435] h-screen">
+  <main class="bg-[#4169E1] h-screen">
     <section
-      class="bbg-[#303435] flex justify-center items-center pt-20 container mx-auto"
+      class="bbg-[#4169E1] flex justify-center items-center pt-20 container mx-auto"
     >
       <div
         class="p-4 md:p-8 space-y-3 w-11/12 mx-auto mt-20 bg-white rounded-xl md:w-[500px] border shadow-sm"
@@ -42,6 +42,17 @@
             {{ processing ? "processing..." : "Sign in" }}
           </button>
         </form>
+        <p class="text-base text-center sm:px-6 text-gray-900">
+          Forgot password?
+          <nuxt-link
+            to="/admin/forgot"
+            rel="noopener noreferrer"
+            href="#"
+            class="underline text-gray-900"
+          >
+            change password
+          </nuxt-link>
+        </p>
       </div>
     </section>
   </main>

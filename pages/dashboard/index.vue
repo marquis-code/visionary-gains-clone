@@ -1,5 +1,5 @@
 <template>
-  <main class="space-y-6">
+  <main class="space-y-6 h-screen overflow-y-auto">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
       <div class="lg:col-span-2 border-blue-500">
         <div
@@ -82,9 +82,9 @@
           <div
             class="bg-white py-10 space-y-4 border border-gray-600 h-[400px] overflow-y-auto"
           >
-            <h1 class="text-gray-600 font-bold border-b pb-4 pl-6">
+            <h3 class="text-gray-600 font-bold border-b pb-4 pl-6">
               Recent Transactions
-            </h1>
+            </h3>
             <div
               v-if="!loadingTransactions && transactionsList"
               class="text-gray-100 w-full p-3 rounded-lg"
@@ -159,7 +159,7 @@
 
 <script>
 export default {
-  layout: "user-dashboard",
+  layout: "customer-dashboard",
   data() {
     return {
       loading: false,

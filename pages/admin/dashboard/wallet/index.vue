@@ -1,8 +1,8 @@
 <template>
-  <main>
+  <main class="h-screen" >
     <main class="space-y-10">
       <div class="flex justify-between items-center">
-        <h1 class="text-white font-medium">Overview</h1>
+        <h2 class="text-white font-medium">Overview</h2>
         <button
           type="button"
           class="px-3 py-2 rounded-full text-white bg-black"
@@ -196,7 +196,7 @@
 
 <script>
 export default {
-  layout: "dashboards",
+  layout: "admin-dashboard",
   data() {
     return {
       loading: false,

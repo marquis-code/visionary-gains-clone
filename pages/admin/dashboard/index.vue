@@ -1,73 +1,78 @@
 <template>
-  <main class="space-y-10">
-    <div>
-      <h1 class="text-white font-medium">Statistics</h1>
-    </div>
-    <div v-if="!loading" class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+  <main class="h-screen">
+    <section class="space-y-10">
+      <div>
+        <h2 class="text-white font-medium">Statistics</h2>
+      </div>
       <div
-        v-for="(item, index) in computedStats"
-        :key="index"
-        class="h-32 rounded-lg bg-black flex items-center gap-x-3 pl-6"
+        v-if="!loading"
+        class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8"
       >
         <div
-          :class="item.classStyle"
-          class="rounded-full h-10 w-10 flex justify-center items-center"
+          v-for="(item, index) in computedStats"
+          :key="index"
+          class="h-32 rounded-lg bg-black flex items-center gap-x-3 pl-6"
         >
-          <img
-            :src="require(`~/assets/icons/${item.icon}.svg`)"
-            alt="stat icon"
-          />
-        </div>
-        <div>
-          <h1 class="text-xl font-medium text-white">
-            {{ item.count }}
-          </h1>
-          <p class="text-xs text-gray-100">
-            {{ item.name }}
-          </p>
-        </div>
-      </div>
-    </div>
-    <div v-else class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
-      <loader v-for="itm in 4" :key="itm" />
-    </div>
-    <div class="lg:flex w-full gap-x-10 pt-6 space-y-6 lg:space-y-0">
-      <div
-        class="h-full rounded-lg lg:w-6/12 py-3 bg-gray-200 border space-y-6"
-      >
-        <div class="flex justify-between items-center px-6">
-          <p class="font-medium">Active Visitors</p>
+          <div
+            :class="item.classStyle"
+            class="rounded-full h-10 w-10 flex justify-center items-center"
+          >
+            <img
+              :src="require(`~/assets/icons/${item.icon}.svg`)"
+              alt="stat icon"
+            />
+          </div>
           <div>
-            <select
-              class="border outline-none rounded-md bg-gray-100 text-sm px-3 py-2.5"
-            >
-              <option>Monthly</option>
-              <option>Weekly</option>
-              <option>Yearly</option>
-            </select>
+            <h1 class="text-xl font-medium text-white">
+              {{ item.count }}
+            </h1>
+            <p class="text-xs text-gray-100">
+              {{ item.name }}
+            </p>
           </div>
         </div>
-        <graph-3 />
       </div>
-      <div
-        class="h-full rounded-lg lg:w-6/12 py-3 bg-gray-200 border space-y-6"
-      >
-        <div class="flex justify-between items-center px-6">
-          <p class="font-medium">Wallet Usage</p>
-          <div>
-            <select
-              class="border outline-none rounded-md bg-gray-100 text-sm px-3 py-2.5"
-            >
-              <option>Monthly</option>
-              <option>Weekly</option>
-              <option>Yearly</option>
-            </select>
+      <div v-else class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+        <loader v-for="itm in 4" :key="itm" />
+      </div>
+      <div class="lg:flex w-full gap-x-10 pt-6 space-y-6 lg:space-y-0">
+        <div
+          class="h-full rounded-lg lg:w-6/12 py-3 bg-gray-200 border space-y-6"
+        >
+          <div class="flex justify-between items-center px-6">
+            <p class="font-medium">Active Visitors</p>
+            <div>
+              <select
+                class="border outline-none rounded-md bg-gray-100 text-sm px-3 py-2.5"
+              >
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
           </div>
+          <graph-3 />
         </div>
-        <graph-4 />
+        <div
+          class="h-full rounded-lg lg:w-6/12 py-3 bg-gray-200 border space-y-6"
+        >
+          <div class="flex justify-between items-center px-6">
+            <p class="font-medium">Wallet Usage</p>
+            <div>
+              <select
+                class="border outline-none rounded-md bg-gray-100 text-sm px-3 py-2.5"
+              >
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+          <graph-4 />
+        </div>
       </div>
-    </div>
-    <!-- <graph-4 /> -->
+      <!-- <graph-4 /> -->
+    </section>
   </main>
 </template>
 
@@ -77,7 +82,7 @@ export default {
   components: {
     Graph4,
   },
-  layout: "dashboards",
+  layout: "admin-dashboard",
   data() {
     return {
       stats: {},

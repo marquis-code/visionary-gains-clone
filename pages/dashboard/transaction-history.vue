@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="h-screen overflow-y-auto">
     <Transition name="fade">
       <!-- <b-container> -->
       <section class="text-white">
@@ -154,7 +154,7 @@ export default {
   components: {
     EnlargeableImage,
   },
-  layout: "user-dashboard",
+  layout: "customer-dashboard",
   scrollToTop: true,
   data() {
     return {

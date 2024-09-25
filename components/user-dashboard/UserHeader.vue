@@ -11,15 +11,13 @@
       </button>
       <b-sidebar id="sidebar-1" title="Sidebar" no-header shadow backdrop>
         <template #default="{ hide }">
-          <div class="p-3 z-50 bg-[#030303] text-white">
+          <div class="p-3 z-50 bg-[#030303] text-white h-screen">
             <div class="flex justify-between items-center text-white">
-              <h4 class="text-white" id="sidebar-no-header-title text-xl pl-4">
+              <h4 class="text-white" id="sidebar-no-header-title text-2xl pl-4">
                 Lucent Gains
-                <!-- <img src="@/assets/img/logo.png" alt="logo" class="w-60"> -->
-                <!-- <img src="@/assets/img/Fidelitysvalues.png" alt="logo" class="h-10 w-10"> -->
               </h4>
               <button @click="hide">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" fill="none"
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18" />
                   <line x1="6" y1="6" x2="18" y2="18" />
@@ -29,7 +27,7 @@
             <nav class="mb-3 flex justify-between flex-col">
               <ul class="mt-6 space-y-1">
                 <li class="space-y-6">
-                  <nuxt-link @click.prevent="v-b-toggle.sidebar-1" v-for="{ name, url, icon } in sidebarItems" :key="name" :to="url"
+                  <nuxt-link  v-for="{ name, url, icon } in sidebarItems" :key="name" :to="url"
                     class="rounded-md space-y-2 pl-3 py-2.5 text-sm font-light text-gray-700 flex items-center space-x-3">
                     <!-- <div class="shadow-sm h-8 w-8 p-2 rounded-full">
                       <img :src="require(`~/assets/img/${icon}.png`)" alt="icons" class="">

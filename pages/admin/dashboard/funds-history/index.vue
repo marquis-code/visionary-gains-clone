@@ -191,7 +191,7 @@
 <script>
 export default {
   name: "Objective",
-  layout: "dashboards",
+  layout: "admin-dashboard",
   scrollToTop: true,
   data() {
     return {

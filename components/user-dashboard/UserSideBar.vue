@@ -1,8 +1,8 @@
 <template>
   <div class="flex w-2/12 h-screen flex-col justify-between bg-black">
     <div class="px-4 py-6 relative">
-      <span class="grid h-10 w-60 place-content-center rounded-lg text-xs text-gray-600">
-        <img src="@/assets/img/logo.png" alt="logo" class="w-60">
+      <span class="grid h-10 w-60 place-content-center rounded-lg text-xs pt-4 text-gray-600">
+        <img src="@/assets/img/logo.png" alt="logo" class="w-32 h-32">
       </span>
 
       <ul class="mt-6 space-y-1 relative">
